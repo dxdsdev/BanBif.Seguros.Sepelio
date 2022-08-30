@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MicroSeguro Sepelio - BanBif</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/css/form-elements.css" />
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/fonts/fonts.css" />
+    <link href="~/assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,600,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Roboto+Slab&display=swap" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="~/assets/fonts/fonts.css"></script>
+    <script src="~/assets/js/alertifyjs/alertify.min.js"></script>
+    <link href="~/assets/css/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/assets/css/alertifyjs/default.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function () {
+            $("#formfloat input").focusout(function () {
+                var text_value = $(this).val();
+
+                if (text_value === "") {
+                    $(this).removeClass("float-label");
+                } else {
+                    $(this).addClass("float-label");
+                }
+            });
+        });
+    </script>
+</head>
+<body id="ldg_crm">
+    <!--<nav id="ldg_crm_nav" class="bg-blanco">
+        <div class="centrado">
+            <img class="logo-bif" src="~/assets/img/logo-cyan.png">
+        </div>
+    </nav>-->
+    <nav id="ldg_crm_nav" class="bg-cyan">
+        <div class="centrado">
+            <a href="https://banbif.com.pe/"><img class="logo-bif" src="~/assets/img/logo-blanco.png" alt="logo" /></a>
+        </div>
+    </nav>
+    <section id="ldg_crm_bnn-form">
+        <div class="centrado">
+            <div class="col-xs-7 col-md-6 col-lg-6">
+                <img class="logo-hola" src="~/assets/img/img_HOLA.png" alt="logo" />
+                <h1>Microseguro de Sepelio</h1>
+
+                <div id="ldg_crm_bnn-form_beneficios" class="portfolio-details-container">
+                    <div class="owl-carousel portfolio-details-carousel">
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Indemnización por fallecimiento.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Adquiérelo desde S/4.50 mensual.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Recibe una indemnización adicional por muerte accidental.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Desamparo Familiar Súbito</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 col-md-6 col-lg-6"><img class="grafica" src="~/assets/img/grafica.png" alt="grafica" /></div>
+        </div>
+    </section>
+    <section id="ldg_crm_form">
+        <div class="centrado">
+            <h2>Para finalizar, confirma los datos y elige el Nro de cuenta o Tarjeta de Crédito donde se cargará el seguro</h2>
+
+            <div class="visible col-xs-11 col-md-8 col-sm-11 auto-0">
+                <p class="text-left"><strong>1. Resumen de asegurados</strong></p>
+
+                <table id="resumen-datos" class="mb-2">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>DNI</th>
+                            @*<th>Costo</th>*@
+                        </tr>
+                    </thead>
+                </table>
+
+                <p class="text-left mt-1"><strong>2. Elige el nro de cuenta o tarjeta de crédito a cargo:</strong></p>
+
+                <div class="select-box col-xs-12 col-md-7 col-sm-6">
+                    <select class="conicono" name="" id="cboCuenta">
+                       
+                    </select>
+                </div>
+                <div class="select-box col-xs-12 col-md-5 col-sm-6" id="divMonto">
+                    
+                </div>
+            </div>
+            <div class="visible col-xs-11 col-md-8 col-sm-11 auto-0">
+
+                <div class="checkbox">
+                    <label>
+                        <input type="hidden" id="checkDatos" name="checkDatos" value="1" />
+                        <input type="checkbox" checked="" onClick="changeCheck()" id="ValidaMonto" />
+                        <i class="input-helper"></i>
+                        <div id="divMonto2">
+
+                        </div>
+                        
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="hidden" id="checkDatos" name="checkDatos" value="2" />
+                        <input type="checkbox" onClick="changeCheck()"  id="ValidarTerminosCondiciones" />
+                        <i class="input-helper"></i>
+                        <p style="padding: 0;">Entiendo y acepto las condiciones del producto y haber leído el <a class="donwloadcertificado" href="https://www.banbif.com.pe/Portals/0/PDF/Seguros/certificado-microseguro-sepelio.pdf" target="_blank">Certificado de Microseguro de Sepelio.</a></p>
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <div id="divValidarCargo">
+                            <input type="hidden" id="checkDatos" name="checkDatos" value="3" />
+                            <input type="checkbox" onClick="changeCheck()" id="ValidarCargoDia"/>
+                            <i class="input-helper"></i>
+                            <p style="padding: 0;">Acepto que la primera cuota del seguro contratado se cargue en línea el mismo día de la afiliación (*) (Opcional).</p>
+                        </div>
+                            </label>
+                    <p>(*) De no marcar esta opción, el primer cargo de la prima del seguro se realizará el siguiente mes en la misma fecha de su afiliación.</p>
+                </div>
+            </div>
+            <div class="visible col-xs-11 col-md-10 col-sm-11 mb-2 auto-0">
+                <div class="f1-buttons">
+                    <a class="btn btn-next bt-1" id="btnfinalizar">Solicitar afiliación</a>
+                    <a class="btn btn-previous bt-2" id="btnvolver">Volver</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+    <script>
+        function RegistrarLog(request) {
+            request.CodigoUnico = sessionStorage.UID;
+            request.IpCliente = sessionStorage.IP_CLIENTE;
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            $.ajax({
+                url: sessionStorage.URL + '/Home/RegistrarLog',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(request),
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+        var bDescarga = false;
+      
+        $(document).ready(function () {
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+           
+            console.log(sessionStorage.CodCliente);
+            if (sessionStorage.CodCliente == undefined) {
+                window.location.href = sessionStorage.URL;
+            }
+            else {
+                cargarAsegurados();
+                var monto = "S/4.5";
+                if (sessionStorage.TipoPlan == "2") {
+                    monto = "S/9.0";
+                }
+
+                $('#divMonto').append('<p class="text-left">Prima total mensual<br /> <strong class="prima">' + monto + ' </strong></p>');
+                $('#divMonto2').append('<p style="padding: 0;">Acepto el cargo de ' + monto + ' mensual a mi Nº de Cuenta o Tarjeta de Crédito BanBif selccionada.</p>');
+                var Cliente = {};
+                Cliente.CodigoCliente = sessionStorage.CodCliente;
+                bDescarga = false;
+
+                /*OBTENER DATOS CLIENTE*/
+                $.ajax({
+                    url: sessionStorage.URL + '/EligeCuenta/ObtenerTarjetas',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(Cliente),
+                    success: function (response) {
+
+                        if (response.Result) {
+                            //$("#txt_correo_validacion").val(response.Data.Correo);
+                            //$("#spClienteConfirmacion").text(response.Data.Nombre);
+
+                            var htmlTarjetas = '';
+                            $.each(response.Data.NroTarjeta, function (index, item) {
+                                htmlTarjetas += '<option value="' + item.CodigoCliente + '">' + item.NroTarjetaCliente + '</option>';
+                            });
+                            $('#cboCuenta').html(htmlTarjetas);
+                        }
+
+                      //  $.unblockUI();
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+                        //$.unblockUI();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                      //  $.unblockUI();
+                    },
+                    complete: function () {
+                        //$.unblockUI();
+                        //$("#prueba").dialog("close")
+                    }
+                });
+            }
+
+
+            $("#btnvolver").click(function () {
+                window.href = window.history.back();
+            });
+
+            $(".donwloadcertificado").on("click", function () {
+               
+                bDescarga = true;
+            });
+
+            $("#btnfinalizar").click(function () {
+
+                if ($("#ValidaMonto").prop('checked') != true) {
+                    swal("¡Hola!", "Ud.no ha Aceptado el cargo a su tarjeta", "error");
+                    return;
+                }
+                if ($("#ValidarTerminosCondiciones").prop('checked') != true) {
+
+                    swal("¡Hola!", "Certificado del seguro no ha sido aceptado", "error");
+                    return;
+                }
+                if (bDescarga == false) {
+                    swal("¡Hola!",'Recuerda revisar el certificado del seguro antes de solicitar la afiliación', "error");
+                    return
+                }
+
+                var Solicitud = {};
+                Solicitud.CodigoCliente = $('#cboCuenta').val();
+                Solicitud.Token = sessionStorage.TokenIngresado;
+                Solicitud.CargoTarjeta = $('#ValidaMonto').prop('checked');
+                Solicitud.CargoDia = $('#ValidarCargoDia').prop('checked');
+                Solicitud.TerminosCondiciones = $('#ValidarTerminosCondiciones').prop('checked');
+                Solicitud.CodigoPlan = sessionStorage.TipoPlan;
+                Solicitud.NombreCliente = sessionStorage.NombreTitular;
+                bDescarga = false;
+                var arrConyugue = [];
+                if (sessionStorage.Adicionales == "Si") {
+
+                    var objConyugue = {};
+                    objConyugue.NombreConyugue = sessionStorage.nombreConyugue.toUpperCase();
+                    objConyugue.DocumentoConyugue = sessionStorage.documentoConyugue;
+                    objConyugue.FechaNacimiento = sessionStorage.fechaNacimientoConyugue;
+                    objConyugue.CodigoSexo = sessionStorage.sexoConyugue;
+                    objConyugue.CorreoConyugue = sessionStorage.emailConyugue;
+                    objConyugue.TelefonoConyugue = sessionStorage.telefonoConyugue;
+                    objConyugue.CodigoCiudad = '';
+                    objConyugue.DireccionConyugue = sessionStorage.direccionConyugue;
+                    arrConyugue.push(objConyugue);
+
+                    console.log(arrConyugue);
+                    Solicitud.Conyugues = arrConyugue;
+                }
+                else {
+                    Solicitud.Conyugues = arrConyugue;
+                }
+                $.ajax({
+                    url: sessionStorage.URL + '/EligeCuenta/RegistrarSolicitud',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(Solicitud),
+                    success: function (response) {
+                        console.log(response);
+                        if (response.Result) {
+                            var LogRequest = {};
+                            LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                            LogRequest.CodigoPaso = 6;
+                            LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: REGISTRAR AFILIACIÓN | STATUS: TRUE | JSON: " + JSON.stringify(Solicitud);
+                            RegistrarLog(LogRequest);
+
+                            window.location.href = sessionStorage.URL + "/Gracias";
+                        } else {
+                            alert('Los datos que ha ingresado no son correctos.');
+                        }
+
+                       // $.unblockUI();
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+                        //$.unblockUI();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                     //   $.unblockUI();
+                    },
+                    complete: function () {
+                        //$.unblockUI();
+                        //$("#prueba").dialog("close")
+                    }
+                });
+            });
+
+        });
+
+        function cargarAsegurados() {
+
+            $('#resumen-datos tbody').remove();
+            var html = '<tbody>';
+
+            html += '<tr>';
+            html += '<td>Titular</td>';
+            html += '<td>' + sessionStorage.NombreTitular + '</td>';
+            html += '<td>' + sessionStorage.Documento+ '</td>';
+
+            html += '</tr>';
+            if (sessionStorage.Adicionales == "Si") {
+                html += '<tr>';
+                html += '<td>Cónyugue</td>';
+                html += '<td>' + sessionStorage.nombreConyugue.toUpperCase() + '</td>';
+                html += '<td>' + sessionStorage.documentoConyugue.toUpperCase() + '</td>';
+
+                html += '</tr>';
+            }
+
+
+
+            html += '</tbody>';
+            $('#resumen-datos').append(html);
+        }
+    </script>
+    <script>
+            // Portfolio details carousel
+            $(".portfolio-details-carousel").owlCarousel({
+                autoplay: true,
+                autoplayHoverPause: true,
+                items: 4,
+                nav: true,
+                dots: true,
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true,
+                        autoplay: true,
+                    },
+                    600: {
+                        items: 1,
+                        nav: true,
+                        autoplay: true,
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true,
+                        loop: true,
+                        autoplay: true,
+                        margin: 20,
+                    },
+                },
+            });
+    </script>
+</body>
+</html>

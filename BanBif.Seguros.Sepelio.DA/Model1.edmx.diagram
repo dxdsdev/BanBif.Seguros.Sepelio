@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c5e7d9c0358412995f8341fb444686c" Name="Diagram1">
+        <EntityTypeShape EntityType="panelModel.Seguridad_Aplicacion" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="panelModel.SEGURIDAD_TERMINOS_CONDICIONES" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_PASO_TRANSACCION" Width="1.5" PointX="8.25" PointY="1.25" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_SEXO" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_TIPO_PLAN" Width="1.5" PointX="6" PointY="14.125" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Width="1.5" PointX="6" PointY="2.375" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Width="1.5" PointX="0.75" PointY="6.5" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_PROV" Width="1.5" PointX="3" PointY="10.75" />
+        <EntityTypeShape EntityType="panelModel.tbl_mSEGUROSEPELIO_CLIENTE" Width="3.375" PointX="11.375" PointY="4" />
+        <EntityTypeShape EntityType="panelModel.tbl_mSEGUROSEPELIO_TOKEN" Width="1.5" PointX="10.75" PointY="0.75" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__CODIG__660CC658" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__ID_CI__5E6BA490" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__ID_PR__6148113B" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE" Width="2.125" PointX="3" PointY="4.375" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__CODIG__6CB9C3E7" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__ID_CI__6DADE820" />
+        <EntityTypeShape EntityType="panelModel.tbl_aSEGUROSEPELIO_TERCERO" Width="1.5" PointX="6" PointY="5.375" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__CODIG__708A54CB" />
+        <AssociationConnector Association="panelModel.FK__tbl_aSEGU__ID_CI__717E7904" />
+        <EntityTypeShape EntityType="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Width="2.375" PointX="8.25" PointY="8" />
+        <AssociationConnector Association="panelModel.FK__tbl_mSEGU__CODIG__587DC110" />
+        <AssociationConnector Association="panelModel.FK__tbl_mSEGU__CODIG__5971E549" />
+        <AssociationConnector Association="panelModel.FK__tbl_mSEGU__CODIG__57899CD7" />
+        <AssociationConnector Association="panelModel.FK__tbl_mSEGU__CODIG__5695789E" />
+        <AssociationConnector Association="panelModel.FK__tbl_mSEGU__CODIG__55A15465" />
+        <EntityTypeShape EntityType="panelModel.tbl_mSEGUROSEPELIO_LOG" Width="1.5" PointX="8.375" PointY="4.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

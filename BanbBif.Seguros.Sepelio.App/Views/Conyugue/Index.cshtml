@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>título - BanBif</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/css/form-elements.css" />
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/fonts/fonts.css" />
+    <link href="~/assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,600,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Roboto+Slab&display=swap" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/favicon.ico" />
+
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="~/assets/fonts/fonts.css"></script>
+
+    <script>
+            $(document).ready(function () {
+                $("#formfloat input").focusout(function () {
+                    var text_value = $(this).val();
+
+                    if (text_value === "") {
+                        $(this).removeClass("float-label");
+                    } else {
+                        $(this).addClass("float-label");
+                    }
+                });
+            });
+    </script>
+</head>
+<body id="ldg_crm">
+    <!--<nav id="ldg_crm_nav" class="bg-blanco">
+        <div class="centrado">
+            <img class="logo-bif" src="./assets/img/logo-cyan.png">
+        </div>
+    </nav>-->
+    <nav id="ldg_crm_nav" class="bg-cyan">
+        <div class="centrado">
+            <a href="https://banbif.com.pe/"><img class="logo-bif" src="~/assets/img/logo-blanco.png" alt="logo" /></a>
+        </div>
+    </nav>
+    <section id="ldg_crm_bnn-form">
+        <div class="centrado">
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                <img class="logo-hola" src="~/assets/img/img_HOLA.png" alt="logo" />
+                <h1>Microseguro de Sepelio</h1>
+
+                <div id="ldg_crm_bnn-form_beneficios" class="portfolio-details-container">
+                    <div class="owl-carousel portfolio-details-carousel">
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Indemnización por fallecimiento.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Adquiérelo desde S/4.50 mensual.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Recibe una indemnización adicional por muerte accidental.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Desamparo Familiar Súbito</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 col-md-6 col-lg-6"><img class="grafica" src="~/assets/img/grafica.png" alt="grafica" /></div>
+        </div>
+    </section>
+    <section id="ldg_crm_form">
+        <div class="centrado">
+            <h2>Microseguro de Sepelio: Plan 2 (Titular + cónyuge)</h2>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pr-0 pl-0 auto-0 text-left">
+                <p>
+                    - El titular puede agregar a su cónyugue (edad máxima de ingreso solicitada por la Cía. de seguros 49 años).</br>
+                </p>
+            </div>
+
+            <div id="formfloat" class="formulario col-xs-12 col-sm-12 col-md-10 col-lg-10 pr-0 pl-0 auto-0">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pr-0 pl-0">
+                    <h4 class="titulo-secundario">Datos del titular</h4>
+                    <div class="input-box col-xs-12 col-md-8 col-sm-6">
+                        <input id="nombreTitular" type="text" name="" disabled autocomplete="off" />
+                        <label>Nombres</label>
+                    </div>
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="dniTitular" type="text" name="dniTitular" disabled autocomplete="off" />
+                        <label>Celular</label>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pr-0 pl-0">
+                    <h4 class="titulo-secundario">Datos del Cónyugue</h4>
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="nombre" type="text" name="nombre" required autocomplete="off" />
+                        <label>Nombre</label>
+                    </div>
+
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="documento" type="text" name="documento" maxlength="10" onkeypress="return soloNumeros(event)" required autocomplete="off" />
+                        <label>DNI</label>
+                    </div>
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="fechaNacimiento" type="date" name="fechaNacimiento" required autocomplete="off" />
+                    </div>
+                    <div class="select-box col-xs-12 col-md-4 col-sm-6">
+                        <select class="conicono" name="sexo" id="cboSexo">
+                            <option value="10" selected>Femenino</option>
+                            <option value="9">Masculino</option>
+                        </select>
+                    </div>
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="email" type="text" name="email" required autocomplete="off" />
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box col-xs-12 col-md-4 col-sm-6">
+                        <input id="celular" type="text" name="celular" onkeypress="return soloNumeros(event)" maxlength="10" required autocomplete="off" />
+                        <label>Celular</label>
+                    </div>
+                    <div class="input-box col-xs-12 col-md-12 col-sm-6">
+                        <input id="direccion" type="text" name="direccion" required autocomplete="off" />
+                        <label>Dirección</label>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pr-0 pl-0 auto-0">
+                <div class="f1-buttons">
+                    <a class="btn btn-next bt-1" id="btnContinuar">Guardar y continuar</a>
+                    <a class="btn btn-previous bt-2" id="btnVolver">Volver</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="./assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="~/assets/js/Validaciones.js"></script>
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var EdadValida = 0;
+        function CalcularEdad() {
+
+            var Conyuguess = {};
+            Conyuguess.FechaNacimiento = $('#fechaNacimiento').val();
+
+            $.ajax({
+                url: sessionStorage.URL + '/Conyugue/CalcularEdad',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(Conyuguess),
+                success: function (response) {
+                    console.log(response.result);
+                    if (response.result == "OK") {
+                        EdadValida = 1;
+                    }
+                    console.log(EdadValida);
+                },
+                failure: function (msg) {
+                    console.log(msg);
+                    // $.unblockUI();
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                    //$.unblockUI();
+                },
+                complete: function () {
+                    //$.unblockUI();
+                    //$("#prueba").dialog("close")
+                }
+            });
+        }
+
+         function RegistrarLog(request) {
+            request.CodigoUnico = sessionStorage.UID;
+            request.IpCliente = sessionStorage.IP_CLIENTE;
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            $.ajax({
+                url: sessionStorage.URL + '/Home/RegistrarLog',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(request),
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+
+        
+
+        $(document).ready(function () {
+
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+          
+            console.log(sessionStorage.CodCliente);
+            if (sessionStorage.CodCliente == undefined) {
+                window.location.href = sessionStorage.URL;
+            }
+            else {
+                $('#nombreTitular').val(sessionStorage.NombreTitular);
+                $('#dniTitular').val(sessionStorage.Documento);
+                console.log(sessionStorage.direccionConyugue);
+                if (sessionStorage.nombreConyugue != undefined) {
+                    $('#nombre').val(sessionStorage.nombreConyugue.toUpperCase());
+                    $('#documento').val(sessionStorage.documentoConyugue);
+                    $('#fechaNacimiento').val(sessionStorage.fechaNacimientoConyugue);
+                    $('#cboSexo').val(sessionStorage.sexoConyugue);
+                    $('#email').val(sessionStorage.emailConyugue);
+                    $('#celular').val(sessionStorage.telefonoConyugue);
+                    if (sessionStorage.direccionConyugue != undefined) {
+                        $('#direccion').val(sessionStorage.direccionConyugue.toUpperCase());
+                    }
+
+                }
+            }
+
+            $("#btnContinuar").click(function () {
+
+                var nombre = $('#nombre').val();
+                var documento = $('#documento').val();
+                var fechaNacimiento = $('#fechaNacimiento').val();
+                var Sexo = $('#cboSexo').val();
+                var descSexo = $('#cboSexo option:selected').text();
+                var email = $('#email').val();
+                var telefono = $('#celular').val();
+                var Ciudad = "";
+                var descCiudad = "";
+                var Provincia = "";
+                var descProvincia = "";
+                var Distrito = "";
+                var descDistrito = "";
+                var direccion = $('#direccion').val();
+
+                /*ASUMIR DATOS OBLIGATORIOS*/
+                if (nombre == '' || documento == '' || fechaNacimiento == '' || email == '' || telefono == '' || direccion == '') {
+                    swal("¡Hola!", "Ingrese todos los campos", "error");
+                    return false;
+                }
+                //console.log(EdadValida);
+                //CalcularEdad();
+                //console.log(EdadValida);
+                //if (EdadValida == 0) {
+                //    swal("¡Hola!", "Edad del conyugue fuera del rango permitido.", "error");
+                //    return false;
+                //}
+
+
+                sessionStorage.setItem("nombreConyugue", nombre);
+                sessionStorage.setItem("documentoConyugue", documento);
+                sessionStorage.setItem("fechaNacimientoConyugue", fechaNacimiento);
+                sessionStorage.setItem("emailConyugue", email);
+                sessionStorage.setItem("telefonoConyugue", telefono);
+                sessionStorage.setItem("direccionConyugue", direccion);
+                sessionStorage.setItem("sexoConyugue", Sexo);
+                sessionStorage.setItem("Adicionales", "Si");
+                var textoLog = "Nombre: " + nombre + " Documento: " + documento + " FechaNacimiento: " + fechaNacimiento + " Email: " + email + " Telefono: " + telefono + " Dirección: " + direccion + " Sexo: " + Sexo;
+                var LogRequest = {};
+                LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                LogRequest.CodigoPaso = 5;
+                LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: REGISTRAR CONYUGUE | STATUS: TRUE | JSON: " + textoLog;
+                RegistrarLog(LogRequest);
+
+                window.location.href = sessionStorage.URL + "/EligeCuenta";
+            });
+        });
+        // Portfolio details carousel
+        $(".portfolio-details-carousel").owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            items: 4,
+            nav: true,
+            dots: true,
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                600: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true,
+                    autoplay: true,
+                    margin: 20,
+                },
+            },
+        });
+
+
+    </script>
+</body>
+</html>

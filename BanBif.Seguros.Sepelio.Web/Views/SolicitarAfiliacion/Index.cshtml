@@ -1,0 +1,352 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@* TERCERA PANTLLA *@
+<fieldset>
+    <b style="font-size:20px">Hola <span style="color:#20A3FF" id="spClienteConfirmacion"></span>,</b>
+    <br />
+    <div class="form-group">
+        <p>Debe seleccionar en N° de Cuenta o Tarjeta de Crédito en donde se cargará el valor del plan de seguro:</p>
+        <select id="cboCuenta" class="form-control" data-validate="true" style="font-size:12px; text-align:center;">
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <small>Se ha enviado un código de verificación a tu correo. Por favor ingrésalo para completar la solicitud</small><br>
+        <input type="text" id="txt_correo_validacion" name="correo" class="email form-control" data-validate="true" data-type="email" disabled="disabled" style="font-size:12px; text-align:center;">
+
+    </div>
+    <div align="center">
+        <input type="text" name="clave" id="clave" maxlength="4" class="form-control text-center" placeholder="Ingresar código" style="margin-top:20px; width:170px;height:40px" required>
+    </div>
+    <div align="center">
+        <a href="#" onclick="ReenviarToken()" id="btnReenviar"><u>Reenviar código</u></a>
+        <div id="reenviarCodigo" class="text-primary text-center" style="display:none"><small>(*) Código reenviado a tu correo</small></div>
+        <div id="errorCodigo" class="text-danger text-center" style="display:none"><small>(*) Código ingresado incorrecto</small></div>
+
+    </div>
+    <hr />
+    <div align="left" style="text-align:justify">
+        <div>
+            <div id="divValidarCargo">
+                <input id="ValidarCargo" type="checkbox">
+            </div>
+            <br />
+            <input id="ValidarTerminosCondiciones" type="checkbox"> Entiendo y acepto las condiciones del producto y haber leído el <a class="donwloadcertificado" href="~/assets/file/CertificadoSepelio.pdf" target="_blank">Certificado del Seguro.</a> Abre el enlace para poder continuar
+            <br />
+            <br />
+        </div>
+    </div>
+    <div align="left">
+        <div>
+            Opcional:
+        </div>
+    </div>
+    <br />
+    <div align="left">
+        <div style="text-align:justify">
+            <input id="ValidarCargoDia" type="checkbox"> Acepto que la primera cuota del seguro contratado se cargue en línea el mismo día de la afiliación.(*)
+        </div>
+    </div>
+    <br />
+    <div style="font-size:12px; text-align:justify; color:red;">
+        (*) De no marcar esta opción, el primer cargo de la prima del seguro se realizará el siguiente mes en la misma fecha de su afiliación.
+    </div>
+
+    <div class="f1-buttons">
+
+        <button type="button" id="btnDesembolsar" class="btn btn-next" onclick="RegistrarSolicitud()">Solicitar Afiliación</button>
+        <button type="button" id="btnVolverPantalla3" class="btn btn-previous" onclick="Volver()">Volver</button>
+    </div>
+
+</fieldset>
+
+
+<script type="text/javascript">
+            var dialog;
+            var bDescarga = false;
+
+
+
+            $(document).ready(function () {
+            /*SETEAR CANTIDAD DE CONYUGUES Y TERCEROS*/
+                //var conyugue = JSON.parse(sessionStorage.Conyugue);
+                //var tercero = JSON.parse(sessionStorage.Tercero);
+                var monto = '1.50';
+                if (sessionStorage.flagConyuge == "1") {
+                    monto = '3.00';
+                }
+                if (sessionStorage.flagTerceros == 1)
+                {
+                    var listaTerceros = JSON.parse(sessionStorage.Tercero);
+                    $.each(listaTerceros, function (index, value) {
+                        if (index == 0) {
+                            monto = '3.00';
+                        }
+                        if (index == 1) {
+                            monto = '4.50';
+                        }
+                    });
+                }
+
+                $('#divValidarCargo').append('Acepto el cargo de S/' + monto + ' seguro(s)) mensuales a mi N° de cuenta BanBif o Tarjeta de Crédito BanBif seleccionada.');
+
+                
+
+                /*SETEAR PASO*/
+                $('#f1').removeClass("active");
+                $('#f2').removeClass("active");
+                $('#f3').addClass("active");
+
+                sessionStorage.setItem("URL", "@ViewBag.URL");
+                sessionStorage.setItem("UID", GenerarUID());
+                sessionStorage.setItem("IP_CLIENTE", '@Request.ServerVariables["REMOTE_ADDR"]');
+
+                var Cliente = {};
+                Cliente.CodigoCliente = sessionStorage.CodCliente;
+                bDescarga = false;
+
+                /*OBTENER DATOS CLIENTE*/
+                $.ajax({
+                    url: sessionStorage.URL + '/EligeCuenta/ObtenerTarjetas',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(Cliente),
+                    success: function (response) {
+
+                        if (response.Result) {
+                            $("#txt_correo_validacion").val(response.Data.Correo);
+                            $("#spClienteConfirmacion").text(response.Data.Nombre);
+
+                            var htmlTarjetas = '';
+                            $.each(response.Data.NroTarjeta, function (index, item) {
+                                htmlTarjetas += '<option value="' + item.CodigoCliente + '">' + item.NroTarjetaCliente + '</option>';
+                            });
+                            $('#cboCuenta').html(htmlTarjetas);
+                        }
+
+                        $.unblockUI();
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+                        $.unblockUI();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                        $.unblockUI();
+                    },
+                    complete: function () {
+                        //$.unblockUI();
+                        //$("#prueba").dialog("close")
+                    }
+                });
+
+
+                $(".donwloadcertificado").on("click", function () {
+                    bDescarga = true;
+                });
+
+            });
+
+            function Volver() {
+                window.history.back();
+            }
+
+
+</script>
+
+<script>
+
+    function GenerarUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+
+    function RegistrarSolicitud() {
+
+    ////    //-/------------------------------------------*validar checks
+    //    var terceros = JSON.parse(sessionStorage.Tercero);
+       
+        
+        if ($("#ValidarCargo").prop('checked') != true) {
+            alert('Ud. no ha Aceptado el cargo de tarjeta de S/ 1.50');
+            return;
+        }
+
+
+
+        if ($("#ValidarTerminosCondiciones").prop('checked') != true) {
+            alert('Certificado del seguro no ha sido aceptado');
+            return;
+        }
+
+        if (bDescarga == false) {
+            alert('Recuerda revisar el certificado del seguro antes de solicitar la afiliación');
+            return
+        }
+
+
+        FN_Loading();
+        //var listaTerceros = JSON.parse(sessionStorage.Tercero);
+        
+
+        //TOKEN
+        var Solicitud = {};
+        Solicitud.CodigoCliente = $('#cboCuenta').val();
+        Solicitud.Token = $('#clave').val();
+        Solicitud.CargoTarjeta = $('#ValidarCargo').prop('checked');
+        Solicitud.CargoDia = $('#ValidarCargoDia').prop('checked');
+        Solicitud.TerminosCondiciones = $('#ValidarTerminosCondiciones').prop('checked');
+        Solicitud.CodigoPlan = sessionStorage.CodigoTipoPlan;
+        Solicitud.NombreCliente = sessionStorage.NombreCliente;
+        var arrConyugue = [];
+        if (sessionStorage.flagConyuge =="1") {
+            var listaConyugue = JSON.parse(sessionStorage.Conyugue);
+            $.each(listaConyugue, function (index, value) {
+                var objConyugue = {};
+                objConyugue.NombreConyugue = value.Nombre;
+                objConyugue.ApellidosConyugue = value.Apellido;
+                objConyugue.DocumentoConyugue = value.Documento;
+                objConyugue.FechaNacimiento = value.FechaNacimiento;
+                objConyugue.CodigoSexo = value.Sexo;        
+                objConyugue.CorreoConyugue = value.Email;
+                objConyugue.TelefonoConyugue = value.Telefono;
+                objConyugue.CodigoCiudad = value.Ciudad;
+                objConyugue.DireccionConyugue = value.Direccion;
+                arrConyugue.push(objConyugue);
+            });
+            console.log(arrConyugue);
+            Solicitud.Conyugues = arrConyugue;
+        }
+        else
+        {
+            Solicitud.Conyugues = arrConyugue;
+        }
+        var arrTerceros = [];
+        if (sessionStorage.flagTerceros == "1") {
+            var listaTerceros = JSON.parse(sessionStorage.Tercero);
+            $.each(listaTerceros, function (index, value) {
+                var objTerceros = {};
+                objTerceros.NombreTercero = value.Nombre;
+                objTerceros.ApellidosTercero = value.Apellido;
+                objTerceros.DocumentoTercero = value.Documento;
+                objTerceros.FechaNacimiento = value.FechaNacimiento;
+                objTerceros.CodigoSexo = value.Sexo;
+                objTerceros.CorreoTercero = value.Email;
+                objTerceros.TelefonoTercero = value.Telefono;
+                objTerceros.CodigoCiudad = value.Ciudad;
+                objTerceros.DireccionTercero = value.Direccion;
+                arrTerceros.push(objTerceros);
+            });
+            console.log(arrTerceros);
+            Solicitud.Terceros = arrTerceros;
+        }
+        else {
+            Solicitud.Terceros = arrTerceros;
+        }
+        
+
+        //       var arrTerceros = [];
+        //$.each(listaTerceros, function (index, value) {
+        //    var objTerceros = {};
+        //    objTerceros.Nombre = value.Nombre;
+        //    objTerceros.Apellido = value.TipoMascota;
+        //    objTerceros.Documento = value.Raza;
+        //    objTerceros.FechaNacimiento = value.OtraRaza;
+        //    objTerceros.Sexo = value.FechaNacimiento;
+        //    objTerceros.DescSexo = value.Sexo;
+        //    objTerceros.Email = value.FechaNacimiento;
+        //    objTerceros.Telefono = value.Sexo;
+        //    objTerceros.Ciudad = value.FechaNacimiento;
+        //    objTerceros.DescCiudad = value.Sexo;
+        //    objTerceros.Provincia = value.FechaNacimiento;
+        //    objTerceros.DescProvincia = value.Sexo;
+        //    objTerceros.Distrito = value.Sexo;
+        //    objTerceros.DescDistrito = value.Sexo;
+        //    objTerceros.Direccion = value.Sexo;
+        //    objTerceros.Estado = value.Sexo;
+        //    arrTerceros.push(objTerceros);
+        //});
+
+        //Solicitud.Tercero = arrTerceros;
+
+
+        $.ajax({
+            url: sessionStorage.URL + '/SolicitarAfiliacion/RegistrarSolicitud',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Solicitud),
+            success: function (response) {
+                console.log(response);
+                if (response.Result) {
+
+                 //   alert('Se guardó de manera satisfactoria la transacción');
+
+                    window.location.href = sessionStorage.URL + "/PantallaFinal";
+                } else {
+                    alert('Los datos que ha ingresado no son correctos.');
+                }
+
+                $.unblockUI();
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+    }
+
+    function ReenviarToken() {
+        //TOKEN
+        var Token = {};
+        Token.CodigoCliente = sessionStorage.CodCliente;
+        Token.Tipo = "A";
+
+        $.ajax({
+            url: sessionStorage.URL + '/RegistroConyugue/EnviarToken',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Token),
+            success: function (response) {
+                console.log(response);
+                if (response.Enviado) {
+                    $('#reenviarCodigo').show();
+                } else {
+                    alertify.error('ERROR', 'Ocurrio un error interno, intente de nuevo mas adelante.');
+                }
+                $.unblockUI();
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+    }
+
+</script>

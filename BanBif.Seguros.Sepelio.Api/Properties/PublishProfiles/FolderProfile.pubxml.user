@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Christian\Desktop\Sepelio\Api</_PublishTargetUrl>
+    <History>True|2022-06-27T18:20:46.7011770Z;True|2022-06-27T13:00:02.1198391-05:00;True|2022-06-27T12:59:42.7840009-05:00;True|2022-06-27T12:08:09.7206098-05:00;True|2022-06-13T10:25:23.0297680-05:00;True|2022-06-09T17:49:56.9249078-05:00;True|2022-06-02T12:36:38.7356830-05:00;True|2022-05-24T09:10:30.3557366-05:00;True|2022-05-19T15:08:59.2442981-05:00;True|2022-05-17T15:16:46.8082094-05:00;True|2022-05-09T12:07:22.3248882-05:00;True|2022-05-09T11:45:58.8599119-05:00;True|2022-05-09T11:28:41.2096269-05:00;True|2022-04-28T10:55:24.5111148-05:00;True|2022-04-28T10:53:11.9951953-05:00;True|2022-04-24T11:33:08.7445831-05:00;True|2022-04-18T00:24:44.7559085-05:00;True|2022-04-12T14:46:05.3649517-05:00;True|2022-04-12T14:46:00.9877607-05:00;True|2022-04-12T07:50:27.1057270-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/BanBif.Seguros.Sepelio.Api.dll">
+      <publishTime>06/27/2022 13:20:45</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.Api.pdb">
+      <publishTime>06/27/2022 13:20:45</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.BE.dll">
+      <publishTime>06/27/2022 12:08:06</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.BE.pdb">
+      <publishTime>06/27/2022 12:08:06</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.BL.dll">
+      <publishTime>06/27/2022 13:20:44</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.BL.pdb">
+      <publishTime>06/27/2022 13:20:44</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.DA.dll">
+      <publishTime>06/27/2022 12:08:07</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.DA.dll.config">
+      <publishTime>11/18/2021 21:48:11</publishTime>
+    </File>
+    <File Include="bin/BanBif.Seguros.Sepelio.DA.pdb">
+      <publishTime>06/27/2022 12:08:07</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/16/2020 15:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/16/2020 15:38:56</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>11/28/2018 08:00:46</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>11/28/2018 08:01:14</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
+      <publishTime>11/28/2018 08:03:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>07/08/2020 16:52:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 15:03:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 09:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 08:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 08:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/28/2018 08:02:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/15/2021 22:31:53</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/12/2022 07:50:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

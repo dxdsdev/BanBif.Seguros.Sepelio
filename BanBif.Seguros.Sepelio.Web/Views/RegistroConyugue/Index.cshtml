@@ -1,0 +1,665 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* SEGUNDA PANTLLA *@
+
+<fieldset>
+    <input type="hidden" id="hdnTokenCliente" name="hdnTokenCliente" value="" />
+    <div class="form-group">
+        <div class="f1-buttons">
+            <button type="button" id="btnAgregar" onclick="Agregar()" class="btn btn-success">Agregar Cónyugue</button>
+        </div>
+
+        <div style="fixed:left">
+            <p>Cónyugue vinculada a cada seguro de sepelio</p>
+        </div>
+        <div>
+            <table id="tblConyugue" class="table">
+                <thead>
+                    <tr>
+                        <th>Nro</th>
+                        <th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="f1-buttons">
+        <button type="button" id="btnContinuarPantalla" onclick="Siguiente()" class="btn btn-next">Continuar</button>
+        <button type="button" id="btnVolverPantalla" onclick="Volver()" class="btn btn-previous">Volver</button>
+    </div>
+    <br />
+</fieldset>
+
+<div id="dialog-form" title="Datos del Cónyugue">
+    <fieldset>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="text-align:left"><label for="name">Nombres</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="nombre" id="nombre" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Apellidos</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="apellidos" id="apellidos" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Documento</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="documento" id="documento" class="form-control" onkeypress="return soloNumeros(event)"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Fecha de nacimiento</label></td>
+                    <td>:</td>
+                    <td><input type="date" name="fechaNacimiento" id="fechaNacimiento" class="form-control" onchange="CalcularEdad()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" style="text-align:left">
+                        <label id="edad" style="color: black"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Sexo</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="cboSexo" class="form-control">
+                            <option value="" selected>Seleccione....</option>
+                            @{
+                                if (ViewBag.Sexo != null)
+                                {
+                                    if (ViewBag.Sexo.Sexo.Count > 0)
+                                    {
+                                        foreach (var item in ViewBag.Sexo.Sexo)
+                                        {
+
+                                            <option value="@item.CodigoSexo">@item.Descripcion</option>
+
+                                        }
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Email</label></td>
+                    <td>:</td>
+                    <td><input id="mail" type="text" name="email" required autocomplete="off" onchange="ValidateEmail()"></td>
+                    <td><span id="spanError" style="color: #FF5C5C; font-size: 15px;"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Teléfono</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="telefono" id="telefono" class="form-control" onkeypress="return soloNumeros(event)"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Ciudad</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="cboCiudad" class="form-control" onclick="ListarProvincia(0)">
+                            <option value="" selected>Seleccione....</option>
+                            @{
+                                if (ViewBag.Ciudad != null)
+                                {
+                                    if (ViewBag.Ciudad.ListaCiudad.Count > 0)
+                                    {
+                                        foreach (var item in ViewBag.Ciudad.ListaCiudad)
+                                        {
+
+                                            <option value="@item.CodigoCiudad">@item.Descripcion</option>
+
+                                        }
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Provincia</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="cboProvincia" class="form-control" onclick="ListarDistrito(0)">
+
+                            <option value="" selected>Seleccione....</option>
+                            @{
+                                if (ViewBag.Provincia != null)
+                                {
+                                    if (ViewBag.Provincia.Provincia.Count > 0)
+                                    {
+                                        foreach (var item in ViewBag.Provincia.Provincia)
+                                        {
+
+                                            <option value="@item.CodigoProvincia">@item.DescripcionProvincia</option>
+
+                                        }
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left"><label for="name">Distrito</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="cboDistrito" class="form-control">
+                            <option value="" selected>Seleccione....</option>
+                            @{
+                                if (ViewBag.Distrito != null)
+                                {
+                                    if (ViewBag.Distrito.Distrito.Count > 0)
+                                    {
+                                        foreach (var item in ViewBag.Distrito.Distrito)
+                                        {
+
+                                            <option value="@item.CodigoDistrito">@item.DescripcionDistrito</option>
+
+                                        }
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left"><label for="name">Dirección</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="direccion" id="direccion" class="form-control"></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </fieldset>
+</div>
+
+<script type="text/javascript">
+    var dialog;
+    var listaConyugue = [];
+    var codigoConyugue = 0;
+    var CodigoEditar = 0;
+    var EdadValida = 0;
+    var contadorConyugue = 0;
+
+    function GenerarUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    $(document).ready(function () {
+        /*SETEAR PASO*/
+        $('#f1').removeClass("active");
+        $('#f2').addClass("active");
+        $('#f3').removeClass("active");
+
+        dialog = $("#dialog-form").dialog({
+            autoOpen: false,
+            height: 800,
+            width: 600,
+            modal: true,
+            buttons: {
+                "Guardar": AgregarConyugue,
+                "Cancelar": function () {
+                    dialog.dialog("close");
+                }
+            },
+            close: function () {
+            }
+        });
+    });
+
+    function ListarProvincia(CodigoProvincia) {
+        var ciudad = $('#cboCiudad').val();
+        var Provincia = {};
+        Provincia.CodigoCiudad = ciudad;
+
+        $.ajax({
+            url: sessionStorage.URL + '/RegistroConyugue/ListarProvincia',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Provincia),
+            success: function (response) {
+                console.log(response);
+                if (response.Result) {
+                    if (CodigoProvincia == 0) {
+                        var html = '<option value="" selected>Seleccione....</option>';
+                    } else {
+                        var html = '<option value="">Seleccione....</option>';
+                    }
+
+                    $(response.Data.ListarProvincia).each(function () {
+                        if (CodigoProvincia > 0 && CodigoProvincia == this.CodigoProvincia) {
+                            html += '<option value="' + this.CodigoProvincia + '" selected>' + this.DescripcionProvincia + '</option>'
+                        } else {
+                            html += '<option value="' + this.CodigoProvincia + '">' + this.DescripcionProvincia + '</option>'
+                        }
+                    });
+
+                    $('#cboProvincia').html(html);
+                } else {
+                    var html = '<option value="" selected>Seleccione....</option>';
+                    $('#cboProvincia').html(html);
+                }
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+        ListarDistrito(0);
+    }
+
+    function ListarDistrito(CodigoDistrito) {
+
+        var CodigoCiudad = $('#cboCiudad').val();
+        var provincia = $('#cboProvincia').val();
+        var Distrito = {};
+        Distrito.CodigoProvincia = provincia;
+
+        $.ajax({
+            url: sessionStorage.URL + '/RegistroConyugue/ListarDistrito',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Distrito),
+            success: function (response) {
+                console.log(response);
+                if (response.Result) {
+                    if (CodigoDistrito == 0 && CodigoCiudad == 0) {
+                        var html = '<option value="" selected>Seleccione....</option>';
+                    } else {
+                        var html = '<option value="">Seleccione....</option>';
+                    }
+
+                    $(response.Data.ListaDistrito).each(function () {
+                        if (CodigoDistrito > 0 && CodigoDistrito == this.CodigoDistrito) {
+                            html += '<option value="' + this.CodigoDistrito + '" selected>' + this.DescripcionDistrito + '</option>'
+                        } else {
+                            html += '<option value="' + this.CodigoDistrito + '">' + this.DescripcionDistrito + '</option>'
+                        }
+                    });
+
+                    $('#cboDistrito').html(html);
+                } else {
+                    var html = '<option value="" selected>Seleccione....</option>';
+                    $('#cboDistrito').html(html);
+                }
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+    }
+
+
+    function Agregar() {
+
+        
+        
+        if(contadorConyugue == 1) {
+            alert("Solo se permite agregar 1 cónyugue")
+            return;
+        }
+        dialog.dialog("open");
+    }
+
+    function NroConyugue() {
+
+        var ConyugueIngresado = NroConyugue();
+
+        if (ConyugueIngresado == 0) {
+            alert("Deberá agregar un Cónyugue para poder avanzar.");
+            return false;
+        } else if (ConyugueIngresado < 2) {
+
+            $('#btnAgregar').prop('disabled', true);
+        }
+
+    }
+
+    function AgregarConyugue() {
+        
+
+        codigoConyugue += 1;
+
+        var nombre = $('#nombre').val();
+         var apellidos = $('#apellidos').val();
+         var documento = $('#documento').val();
+        var fechaNacimiento = $('#fechaNacimiento').val();
+        var sexo = $('#cboSexo').val();
+        var descSexo = $('#cboSexo option:selected').text();
+        var email = $('#email').val();
+         var telefono = $('#telefono').val();
+         var ciudad = $('#cboCiudad').val();
+        var descCiudad = $('#cboCiudad option:selected').text();
+         var provincia = $('#cboProvincia').val();
+        var descProvincia = $('#cboProvincia option:selected').text();
+        var distrito = $('#cboDistrito').val();
+        var descDistrito = $('#cboDistrito option:selected').text();
+        var direccion = $('#direccion').val();
+
+        /*ASUMIR DATOS OBLIGATORIOS*/
+        if (nombre == '' || apellidos == '' || documento == '' || fechaNacimiento == '' || sexo == '' || email == '' || telefono == '' || ciudad == '' || provincia == ''
+            || distrito == '' || direccion == '') {
+            alert("Ingrese todos los campos");
+            return false;
+        }
+        if (EdadValida == 0) {
+            alert("Edad del conyugue fuera del rango permitido.");
+            /*alertify.error("Edad de la mascota fuera del rango permitido")*/
+            return false;
+        }
+
+        var objConyugue = {};
+        objConyugue.Codigo = codigoConyugue;
+        objConyugue.Nombre = nombre;
+        objConyugue.Apellido = apellidos;
+        objConyugue.Documento = documento;
+        objConyugue.FechaNacimiento = fechaNacimiento;
+        objConyugue.Sexo = sexo;
+        objConyugue.DescSexo = descSexo;
+        objConyugue.Email = email;
+        objConyugue.Telefono = telefono;
+        objConyugue.Ciudad = ciudad;
+        objConyugue.DescCiudad = descCiudad;
+        objConyugue.Provincia = provincia;
+        objConyugue.DescProvincia = descProvincia;
+        objConyugue.Distrito = distrito;
+        objConyugue.DescDistrito = descDistrito;
+        objConyugue.Direccion = direccion;
+        objConyugue.Estado = 1;
+
+
+
+        if (CodigoEditar == 0) {
+            listaConyugue.push(objConyugue);
+            contadorConyugue += 1;
+            alert("Se agrego al Cónyugue correctamente.");
+        } else {
+            var nuevaListaConyugue = [];
+            $(listaConyugue).each(function () {
+                if (this.Codigo == CodigoEditar) {
+                    this.Nombre = objConyugue.Nombre;
+                    this.Apellido = objConyugue.Apellido;
+                    this.Documento = objConyugue.Documento;
+                    this.FechaNacimiento = objConyugue.FechaNacimiento;
+                    this.Sexo = objConyugue.Sexo;
+                    this.DescSexo = objConyugue.DescSexo;
+                    this.Email = objConyugue.Email;
+                    this.Telefono = objConyugue.Telefono;
+                    this.Ciudad = objConyugue.Ciudad;
+                    this.DescCiudad = objConyugue.DescCiudad;
+                    this.Provincia = objConyugue.Provincia;
+                    this.DescProvincia = objConyugue.DescProvincia;
+                    this.Distrito = objConyugue.Distrito;
+                    this.DescDistrito = objConyugue.DescDistrito;
+                    this.Direccion = objConyugue.Direccion;
+                }
+
+                nuevaListaConyugue.push(this);
+            });
+
+            listaConyugue = nuevaListaConyugue;
+            alert("Se modificó al Cónyugue correctamente.");
+        }
+
+        MostrarConyugue();
+        LimpiarForm();
+        dialog.dialog("close");
+    }
+
+    function LimpiarForm() {
+        $('#nombre').val('');
+         $('#apellidos').val('');
+         $('#documento').val('');
+         $('#fechaNacimiento').val('');
+         $('#cboSexo').val('');
+         $('#email').val('');
+         $('#telefono').val('');
+         $('#cboCiudad').val('');
+         $('#cboProvincia').val('');
+        $('#cboDistrito').val('');
+        $('#direccion').val('');
+        $('#edad').text("");
+        ListarDistrito(0);
+        ListarProvincia(0);
+    }
+
+    function MostrarConyugue() {
+        var contador = 1;
+        $('#tblConyugue tbody').remove();
+        var html = '<tbody>';
+
+        $(listaConyugue).each(function () {
+            if (this.Estado == 1) {
+                html += '<tr>';
+                html += '<td>' + contador + '</td>';
+                html += '<td>' + this.Documento + '</td>';
+                html += '<td>' + this.Nombre + '</td>';
+                html += '<td>' + this.Apellido + '</td>';
+
+                /*BOTONES ACCION*/
+                html += '<td align="center">';
+                html += '<a href="#" style="font-size:16px" onclick="EliminarConyugue(' + this.Codigo +')">';
+                html += '<i class="fa fa-trash" aria-hidden="true"></i>';
+                html += '</a> &nbsp;&nbsp;';
+                html += '<a href="#" style="font-size:16px"  onclick="EditarConyugue(' + this.Codigo +')">';
+                html += '<i class="fa fa-pencil" aria-hidden="true"></i>';
+                html += '</a>';
+                html += '</td>';
+
+                html += '</tr>';
+
+                contador += 1;
+            }
+        });
+
+        html += '</tbody>';
+        $('#tblConyugue').append(html);
+    }
+
+    function EliminarConyugue(CodigoConyugue) {
+        var nuevaListaConyugue = [];
+        $(listaConyugue).each(function () {
+            if (this.Codigo != CodigoConyugue) {
+                nuevaListaConyugue.push(this);
+            }
+        });
+
+        listaConyugue = nuevaListaConyugue;
+        MostrarConyugue();
+    }
+
+    function EditarConyugue(CodigoConyugue) {
+
+        $(listaConyugue).each(function () {
+            if (this.Codigo == CodigoConyugue) {
+                $('#nombre').val(this.Nombre);
+                $('#apellidos').val(this.Apellido);
+                $('#documento').val(this.Documento);
+                $('#fechaNacimiento').val(this.FechaNacimiento);
+                $('#cboSexo').val(this.Sexo);
+                $('#email').val(this.Email);
+                $('#telefono').val(this.Telefono);
+                $('#cboCiudad').val(this.Ciudad);
+                ListarProvincia(this.Provincia);
+                ListarDistrito(this.Distrito);
+                CalcularEdad();
+                $('#cboProvincia').val(this.Provincia);
+                $('#cboDistrito').val(this.Distrito);
+                $('#direccion').val(this.Direccion);
+            }
+        });
+        CodigoEditar = CodigoConyugue;
+        dialog.dialog("open");
+    }
+
+    function NroConyugueActivos() {
+        var contador = 0;
+        $(listaConyugue).each(function () {
+            if (this.Estado == 1) {
+                contador += 1;
+            }
+        });
+
+        return contador;
+    }
+    function Volver() {
+        window.history.back();
+    }
+
+
+
+    function Siguiente() {
+
+
+        /*VALIDAR MASCOTAS SELECCIONADAS MENOR AL NUMERO ESCOGIDO*/
+        sessionStorage.setItem("Conyugue", JSON.stringify(listaConyugue));
+        EnviarToken();
+       
+    }
+
+    function EnviarToken() {
+        FN_Loading();
+        //TOKEN
+        var Token = {};
+        Token.CodigoCliente = sessionStorage.CodCliente;
+        Token.Tipo = "A";
+        $.ajax({
+            url: sessionStorage.URL + '/RegistroConyugue/EnviarToken',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Token),
+            success: function (response) {
+                $.unblockUI();
+                if (response.Enviado) {
+
+                    alert('Se ha enviado un correo de verificación a su buzón de correo electrónico. A continuación ingresar el código de verificación.');
+                    window.location.href = sessionStorage.URL + "/SolicitarAfiliacion";
+                } else {
+                    alertify.error('ERROR', 'Ocurrio un error interno, intente de nuevo mas adelante.')
+                    //alert('Ocurrio un error interno, intente de nuevo mas adelante.');
+                }
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+    }
+
+    function CalcularEdad() {
+        EdadValida = 0;
+        var Conyugues = {};
+        Conyugues.FechaNacimiento = $('#fechaNacimiento').val();
+
+        $.ajax({
+            url: sessionStorage.URL + '/RegistroConyugue/CalcularEdad',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Conyugues),
+            success: function (response) {
+                if (response.result) {
+                    EdadValida = 1;
+                    $('#edad').text("Edad del Conyugue: " + response.mensaje);
+                    $("#edad").css("color", "black");
+
+
+                } else {
+                    EdadValida = 0;
+                    $('#edad').text(response.mensaje);
+                    $("#edad").css("color", "red");
+
+                }
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+    }
+   
+</script>
+

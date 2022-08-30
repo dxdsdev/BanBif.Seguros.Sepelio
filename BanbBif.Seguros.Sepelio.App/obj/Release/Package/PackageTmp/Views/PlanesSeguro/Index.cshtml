@@ -1,0 +1,447 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>título - BanBif</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/form-elements.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/fonts/fonts.css">
+    <link href="~/assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="~/assets/js/alertifyjs/alertify.min.js"></script>
+    <link href="~/assets/css/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/assets/css/alertifyjs/default.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/favicon.ico">
+
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="~/assets/fonts/fonts.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#formfloat input').focusout(function () {
+                var text_value = $(this).val();
+
+                if (text_value === "") {
+                    $(this).removeClass('float-label');
+                } else {
+                    $(this).addClass('float-label');
+                }
+            });
+        });
+    </script>
+
+</head>
+<body id="ldg_crm">
+    <!--<nav id="ldg_crm_nav" class="bg-blanco">
+        <div class="centrado">
+            <img class="logo-bif" src="~/assets/img/logo-cyan.png">
+        </div>
+    </nav>-->
+    <nav id="ldg_crm_nav" class="bg-cyan">
+        <div class="centrado">
+            <a href="https://banbif.com.pe/"><img class="logo-bif" src="~/assets/img/logo-blanco.png" alt="logo"></a>
+        </div>
+    </nav>
+    <section id="ldg_crm_bnn-form">
+        <div class="centrado">
+            <div class="col-xs-7 col-md-6 col-lg-6">
+
+                <img class="logo-hola" src="~/assets/img/img_HOLA.png" alt="logo">
+                <h1>Microseguro de Sepelio</h1>
+                <div id="ldg_crm_bnn-form_beneficios" class="portfolio-details-container">
+                    <div class="owl-carousel portfolio-details-carousel">
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Indemnización por fallecimiento.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Adquiérelo desde S/4.50 mensual.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Recibe una indemnización adicional por muerte accidental.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Desamparo Familiar Súbito</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 col-md-6 col-lg-6"><img class="grafica" src="~/assets/img/grafica.png" alt="grafica"></div>
+        </div>
+    </section>
+    <section id="ldg_crm_form">
+        <div id="formfloat" class="form-box col-xs-12 col-sm-10 col-md-8 col-lg-7 auto-0">
+
+            <h2>Hola, <strong><span id="spNombreCliente"></span></strong></h2>
+            <p><strong>¿Qué plan deseas contratar?</strong></p>
+
+
+            <div id="elige-seguro" class="row">
+                <div class="plan-seguro col-xs-12 col-sm-10 col-md-6 col-lg-6 auto-0">
+                    <div class="card">
+                        <h3>Plan 1 (Solo Titular)</h3>
+                        <ul>
+                            <li><img src="~/assets/img/iconos/ico-check.svg" alt="check">Fallecimiento por S/6,500.</li>
+                            <li><img src="~/assets/img/iconos/ico-check.svg" alt="check">Indemnización adicional por muerte accidental por S/6,500.</li>
+                            <br>
+                        </ul>
+
+                        <div class="prima-seguro">S/4.50<span> al mes (S/ 0.15 diarios)</span></div>
+                        <a id="mymodalplan1" class="btn btn-next bt-1">Elegir Plan 1</a>
+                    </div>
+
+                </div>
+                <div class="plan-seguro col-xs-12 col-sm-10 col-md-6 col-lg-6 auto-0">
+                    <div class="card">
+                        <h3>Plan 2 (Titular + cónyuge)</h3>
+                        <ul>
+
+                            <li><img src="~/assets/img/iconos/ico-check.svg" alt="check">Fallecimiento por S/7,000 (por asegurado).</li>
+                            <li><img src="~/assets/img/iconos/ico-check.svg" alt="check">Indemnización adicional por muerte accidental de hasta S/7,000 (por asegurado).</li>
+                            <li><img src="~/assets/img/iconos/ico-check.svg" alt="check">Desamparo familiar súbito de S/20,000.</li>
+                        </ul>
+                        <div class="prima-seguro">S/9.00<span> al mes (S/ 0.30 diarios)</span></div>
+                        <a id="mymodalplan2" class="btn btn-next bt-1">Elegir Plan 2</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-left"><span>*Puedes ver aquí el <a href="https://www.banbif.com.pe/Portals/0/PDF/Seguros/certificado-microseguro-sepelio.pdf" target="_blank">Certificado de Sepelio</a></span></p>
+            <p class="text-left"><span>*Edad máxima de afiliación hasta los 49 años (Requisito solicitado por la Compañía de seguros) </span></p>
+            <script>
+                $('.card').click(function () {
+                    $(this).addClass('active').siblings('.card.active').removeClass('active')
+
+                });
+            </script>
+
+            <div class="f1-buttons">
+                <a class="btn btn-previous bt-2" id="btnvolver">Volver</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal Elige Plan-->
+    <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 auto-0">
+                        <h4>¿Deseas agregar asegurados adicional a tu plan ahora?</h4>
+                        <p class="mb-0" style="margin-bottom: 0">
+                            Deberás tener a la mano los siguientes datos: <br> nombres completos, número de DNI y dirección.
+                        </p>
+                        <div class="f1-buttons">
+                            <a id="agregaradicionales" type="button" class="btn btn-next mt-2">Si, continuar</a>
+                            <a id="noadicionales" class="btn btn-previous bt-2 mt-2" data-dismiss="modal" aria-label="Close">No, en otro momento</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>-->
+    <!-- Modal identificación-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0" style="margin-bottom: 0">Ingresa el código enviado a tu correo electrónico <span id="spCorreoCliente"></span></p>
+
+                    <div class="input-box col-xs-12 col-md-8 col-sm-8 auto-0 text-center mb-1">
+                        <input id="token" type="text" name="token" maxlength="4" onkeypress="return soloNumeros(event)" required autocomplete="off">
+                    </div>
+                    <a id="ValidaToken" type="button" class="btn btn-next">Continuar</a>
+                    <br><span>¿No recibiste el código? <a href="javascript://" onclick="EnviarToken()">Reenviar código</a></span>
+                    <br><span>(*)En caso tu correo registrado no sea el vigente, solicita la actualización a través de nuestra banca telefónica al  631-9000 (Lima) o 0-801-0-0456 (Provincias) o en cualquiera de nuestras oficinas a nivel nacional</span>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/Validaciones.js"></script>
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <script>
+        function RegistrarLog(request) {
+            request.CodigoUnico = sessionStorage.UID;
+            request.IpCliente = sessionStorage.IP_CLIENTE;
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            $.ajax({
+                url: sessionStorage.URL + '/Home/RegistrarLog',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(request),
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+
+       
+        $(document).ready(function () {
+             sessionStorage.setItem("URL", "@ViewBag.URL");
+           
+            console.log(sessionStorage.Correo);
+            if (sessionStorage.CodCliente == undefined) {
+                window.location.href = sessionStorage.URL;
+            }
+            else {
+                var Cliente = {};
+                Cliente.CodigoCliente = sessionStorage.CodCliente;
+                $.ajax({
+                    url: sessionStorage.URL + '/PlanesSeguro/ObtenerNombreCliente',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(Cliente),
+                    success: function (response) {
+                        console.log(response);
+                        if (response.Result) {
+                            $("#spNombreCliente").text(response.Data.NombreCliente);
+                            $("#spCorreoCliente").text(sessionStorage.Correo);
+                            
+                            sessionStorage.setItem("NombreTitular", response.Data.NombreCliente);
+                        } else {
+                            //  alertify.error(re}sponse.Mensaje);
+                        }
+
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+
+                    },
+                    complete: function () {
+                        //$.unblockUI();
+                        //$("#prueba").dialog("close")
+                    }
+                });
+            }
+
+
+            $("#mymodalplan1").click(function () {
+                var LogRequest = {};
+                LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                LogRequest.CodigoPaso = 2;
+                LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: ELIGE PLAN | STATUS: TRUE | JSON: Plan 1 (Solo Titular)" ;
+                RegistrarLog(LogRequest);
+                sessionStorage.setItem("TipoPlan", "1");
+                $("#myModal").modal();
+                EnviarToken();
+                console.log(sessionStorage.TipoPlan);
+            });
+            $("#mymodalplan2").click(function () {
+                var LogRequest = {};
+                LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                LogRequest.CodigoPaso = 2;
+                LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: ELIGE PLAN | STATUS: TRUE | JSON: Plan 2 (Titular + cónyuge)";
+                RegistrarLog(LogRequest);
+                sessionStorage.setItem("TipoPlan", "2");
+                $("#myModal").modal();
+                EnviarToken();
+                console.log(sessionStorage.TipoPlan);
+            });
+            $("#noadicionales").click(function () {
+
+                sessionStorage.setItem("Adicionales", "No");
+
+                window.location.href = sessionStorage.URL + "/EligeCuenta";
+            });
+            $("#btnvolver").click(function () {
+
+                window.href = window.history.back();
+            });
+
+            $("#ValidaToken").click(function () {
+                if ($("#token").val() == "") {
+                    swal("¡Hola!", "Por favor, debes de ingresar el token enviado a tu correo.", "error");
+                    return false;
+                }
+                sessionStorage.setItem("URL", "@ViewBag.URL");
+                var Token = {};
+                Token.Documento = sessionStorage.Documento;
+                Token.Token = $("#token").val();
+
+                $.ajax({
+                    url: sessionStorage.URL + '/Home/ValidarToken',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(Token),
+                    success: function (response) {
+                        console.log(response);
+                        if (response.Result) {
+                            sessionStorage.setItem("TokenIngresado", Token.Token);
+                            var LogRequest = {};
+                            LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                            LogRequest.CodigoPaso = 4;
+                            LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: TOKEN VALIDACIÓN | STATUS: TRUE | JSON: " + JSON.stringify(Token);
+                            RegistrarLog(LogRequest);
+                            if (sessionStorage.TipoPlan == "1") {
+                                window.location.href = sessionStorage.URL + "/EligeCuenta";
+                            }
+                            else {
+                                window.location.href = sessionStorage.URL + "/Conyugue";
+                            }
+
+                        } else {
+                            swal("¡Hola!", "El Token ingresado es incorrecto", "error");
+                        }
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+
+                    },
+                    complete: function () {
+                        //$.unblockUI();
+                        //$("#prueba").dialog("close")
+                    }
+                });
+            });
+        });
+
+        function EnviarToken() {
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            var Token = {};
+            Token.CodigoCliente = sessionStorage.CodCliente;
+            Token.Tipo = "A";
+
+            $.ajax({
+                url: sessionStorage.URL + '/Home/EnviarToken',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(Token),
+                success: function (response) {
+
+                    if (response.Enviado) {
+                        var LogRequest = {};
+                        LogRequest.CodigoCliente = sessionStorage.CodCliente;
+                        LogRequest.CodigoPaso = 3;
+                        LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: ENVÍO TOKEN | STATUS: TRUE | JSON: " + JSON.stringify(Token);
+                        RegistrarLog(LogRequest);
+                        
+                    } else {
+                       // alertify.error('ERROR', 'Ocurrio un error interno, intente de nuevo mas adelante.')
+                        swal("¡Hola!", "Ocurrio un error interno, intente de nuevo mas adelante", "error");
+                    }
+                },
+                failure: function (msg) {
+                    console.log(msg);
+
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+
+                },
+                complete: function () {
+                    //$.unblockUI();
+                    //$("#prueba").dialog("close")
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // Portfolio details carousel
+        $(".portfolio-details-carousel").owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            items: 4,
+            nav: true,
+            dots: true,
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                600: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true,
+                    autoplay: true,
+                    margin: 20
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

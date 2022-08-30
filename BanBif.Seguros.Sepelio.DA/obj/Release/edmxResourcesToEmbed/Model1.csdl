@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="panelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="panelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Seguridad_Aplicacion" EntityType="panelModel.Seguridad_Aplicacion" />
+    <EntitySet Name="SEGURIDAD_TERMINOS_CONDICIONES" EntityType="panelModel.SEGURIDAD_TERMINOS_CONDICIONES" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" EntityType="panelModel.tbl_aSEGUROSEPELIO_PASO_TRANSACCION" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_SEXO" EntityType="panelModel.tbl_aSEGUROSEPELIO_SEXO" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_TIPO_PLAN" EntityType="panelModel.tbl_aSEGUROSEPELIO_TIPO_PLAN" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" EntityType="panelModel.tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" />
+    <EntitySet Name="tbl_aSEGUROSEPELIO_UBIGEO_PROV" EntityType="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_PROV" />
+    <EntitySet Name="tbl_mSEGUROSEPELIO_CLIENTE" EntityType="panelModel.tbl_mSEGUROSEPELIO_CLIENTE" />
+    <EntitySet Name="tbl_mSEGUROSEPELIO_TOKEN" EntityType="panelModel.tbl_mSEGUROSEPELIO_TOKEN" />
+    <AssociationSet Name="FK__tbl_aSEGU__CODIG__660CC658" Association="panelModel.FK__tbl_aSEGU__CODIG__660CC658">
+      <End Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" EntitySet="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" />
+      <End Role="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" EntitySet="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_aSEGU__ID_CI__5E6BA490" Association="panelModel.FK__tbl_aSEGU__ID_CI__5E6BA490">
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_PROV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_aSEGU__ID_PR__6148113B" Association="panelModel.FK__tbl_aSEGU__ID_PR__6148113B">
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_PROV" />
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" />
+    </AssociationSet>
+    <EntitySet Name="tbl_aSEGUROSEPELIO_CONYUGUE" EntityType="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE" />
+    <AssociationSet Name="FK__tbl_aSEGU__CODIG__6CB9C3E7" Association="panelModel.FK__tbl_aSEGU__CODIG__6CB9C3E7">
+      <End Role="tbl_aSEGUROSEPELIO_SEXO" EntitySet="tbl_aSEGUROSEPELIO_SEXO" />
+      <End Role="tbl_aSEGUROSEPELIO_CONYUGUE" EntitySet="tbl_aSEGUROSEPELIO_CONYUGUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_aSEGU__ID_CI__6DADE820" Association="panelModel.FK__tbl_aSEGU__ID_CI__6DADE820">
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+      <End Role="tbl_aSEGUROSEPELIO_CONYUGUE" EntitySet="tbl_aSEGUROSEPELIO_CONYUGUE" />
+    </AssociationSet>
+    <EntitySet Name="tbl_aSEGUROSEPELIO_TERCERO" EntityType="panelModel.tbl_aSEGUROSEPELIO_TERCERO" />
+    <AssociationSet Name="FK__tbl_aSEGU__CODIG__708A54CB" Association="panelModel.FK__tbl_aSEGU__CODIG__708A54CB">
+      <End Role="tbl_aSEGUROSEPELIO_SEXO" EntitySet="tbl_aSEGUROSEPELIO_SEXO" />
+      <End Role="tbl_aSEGUROSEPELIO_TERCERO" EntitySet="tbl_aSEGUROSEPELIO_TERCERO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_aSEGU__ID_CI__717E7904" Association="panelModel.FK__tbl_aSEGU__ID_CI__717E7904">
+      <End Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" EntitySet="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+      <End Role="tbl_aSEGUROSEPELIO_TERCERO" EntitySet="tbl_aSEGUROSEPELIO_TERCERO" />
+    </AssociationSet>
+    <EntitySet Name="tbl_mSEGUROSEPELIO_TRANSACCION" EntityType="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" />
+    <AssociationSet Name="FK__tbl_mSEGU__CODIG__587DC110" Association="panelModel.FK__tbl_mSEGU__CODIG__587DC110">
+      <End Role="tbl_aSEGUROSEPELIO_CONYUGUE" EntitySet="tbl_aSEGUROSEPELIO_CONYUGUE" />
+      <End Role="tbl_mSEGUROSEPELIO_TRANSACCION" EntitySet="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_mSEGU__CODIG__5971E549" Association="panelModel.FK__tbl_mSEGU__CODIG__5971E549">
+      <End Role="tbl_aSEGUROSEPELIO_TERCERO" EntitySet="tbl_aSEGUROSEPELIO_TERCERO" />
+      <End Role="tbl_mSEGUROSEPELIO_TRANSACCION" EntitySet="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_mSEGU__CODIG__57899CD7" Association="panelModel.FK__tbl_mSEGU__CODIG__57899CD7">
+      <End Role="tbl_aSEGUROSEPELIO_TIPO_PLAN" EntitySet="tbl_aSEGUROSEPELIO_TIPO_PLAN" />
+      <End Role="tbl_mSEGUROSEPELIO_TRANSACCION" EntitySet="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_mSEGU__CODIG__5695789E" Association="panelModel.FK__tbl_mSEGU__CODIG__5695789E">
+      <End Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" EntitySet="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" />
+      <End Role="tbl_mSEGUROSEPELIO_TRANSACCION" EntitySet="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_mSEGU__CODIG__55A15465" Association="panelModel.FK__tbl_mSEGU__CODIG__55A15465">
+      <End Role="tbl_mSEGUROSEPELIO_CLIENTE" EntitySet="tbl_mSEGUROSEPELIO_CLIENTE" />
+      <End Role="tbl_mSEGUROSEPELIO_TRANSACCION" EntitySet="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    </AssociationSet>
+    <FunctionImport Name="SP_SEGUROSEPELIO_ACTUALIZACONSENTIMIENTO">
+      <Parameter Name="CODIGOCLIENTE" Mode="In" Type="Int32" />
+      <Parameter Name="FLAG" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbl_mSEGUROSEPELIO_LOG" EntityType="panelModel.tbl_mSEGUROSEPELIO_LOG" />
+  </EntityContainer>
+  <EntityType Name="Seguridad_Aplicacion">
+    <Key>
+      <PropertyRef Name="idAplicacion" />
+    </Key>
+    <Property Name="idAplicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SEGURIDAD_TERMINOS_CONDICIONES">
+    <Key>
+      <PropertyRef Name="TERMINOS_ID" />
+    </Key>
+    <Property Name="TERMINOS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="APLICACION_ID" Type="Int32" />
+    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENIDO_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENIDO_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_PASO_TRANSACCION">
+    <Key>
+      <PropertyRef Name="CODIGO_PASO" />
+    </Key>
+    <Property Name="CODIGO_PASO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_TIPO_TRANSACCION" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ORDEN" Type="Int32" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Relationship="panelModel.FK__tbl_aSEGU__CODIG__660CC658" FromRole="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_SEXO">
+    <Key>
+      <PropertyRef Name="CODIGOSEXO" />
+    </Key>
+    <Property Name="CODIGOSEXO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_CONYUGUE" Relationship="panelModel.FK__tbl_aSEGU__CODIG__6CB9C3E7" FromRole="tbl_aSEGUROSEPELIO_SEXO" ToRole="tbl_aSEGUROSEPELIO_CONYUGUE" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TERCERO" Relationship="panelModel.FK__tbl_aSEGU__CODIG__708A54CB" FromRole="tbl_aSEGUROSEPELIO_SEXO" ToRole="tbl_aSEGUROSEPELIO_TERCERO" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_TIPO_PLAN">
+    <Key>
+      <PropertyRef Name="CODIGOTIPOPLAN" />
+    </Key>
+    <Property Name="CODIGOTIPOPLAN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCIONTIPOPLAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__57899CD7" FromRole="tbl_aSEGUROSEPELIO_TIPO_PLAN" ToRole="tbl_mSEGUROSEPELIO_TRANSACCION" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+    <Key>
+      <PropertyRef Name="CODIGO_TIPO_TRANSACCION" />
+    </Key>
+    <Property Name="CODIGO_TIPO_TRANSACCION" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" Relationship="panelModel.FK__tbl_aSEGU__CODIG__660CC658" FromRole="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__5695789E" FromRole="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" ToRole="tbl_mSEGUROSEPELIO_TRANSACCION" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+    <Key>
+      <PropertyRef Name="ID_CIUDAD" />
+    </Key>
+    <Property Name="ID_CIUDAD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UBIGEO_CIUDAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_CIUDAD" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_PROV" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__5E6BA490" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_PROV" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_CONYUGUE" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__6DADE820" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" ToRole="tbl_aSEGUROSEPELIO_CONYUGUE" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TERCERO" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__717E7904" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" ToRole="tbl_aSEGUROSEPELIO_TERCERO" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT">
+    <Key>
+      <PropertyRef Name="ID_DIST" />
+    </Key>
+    <Property Name="ID_DIST" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PROV" Type="Int32" />
+    <Property Name="UBIGEO_DIST" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_DIST" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_PROV" Relationship="panelModel.FK__tbl_aSEGU__ID_PR__6148113B" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_PROV" />
+  </EntityType>
+  <EntityType Name="tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+    <Key>
+      <PropertyRef Name="ID_PROV" />
+    </Key>
+    <Property Name="ID_PROV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_CIUDAD" Type="Int32" />
+    <Property Name="UBIGEO_PROV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_PROV" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__5E6BA490" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_PROV" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" Relationship="panelModel.FK__tbl_aSEGU__ID_PR__6148113B" FromRole="tbl_aSEGUROSEPELIO_UBIGEO_PROV" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" />
+  </EntityType>
+  <EntityType Name="tbl_mSEGUROSEPELIO_CLIENTE">
+    <Key>
+      <PropertyRef Name="CODIGOCLIENTE" />
+    </Key>
+    <Property Name="CODIGOCLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TIPOPRODUCTO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="NROTARJETA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NUMEROCUENTA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TIENESEGURO" Type="Boolean" />
+    <Property Name="COMPROBACION" Type="Boolean" />
+    <Property Name="FECHAREGISTRO" Type="DateTime" Precision="3" />
+    <Property Name="ESTADO" Type="Int32" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__55A15465" FromRole="tbl_mSEGUROSEPELIO_CLIENTE" ToRole="tbl_mSEGUROSEPELIO_TRANSACCION" />
+  </EntityType>
+  <EntityType Name="tbl_mSEGUROSEPELIO_TOKEN">
+    <Key>
+      <PropertyRef Name="CODIGOTOKEN" />
+    </Key>
+    <Property Name="CODIGOTOKEN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TOKEN" Type="Int32" />
+    <Property Name="VALIDADO" Type="Boolean" />
+    <Property Name="FECHA" Type="DateTime" Precision="3" />
+    <Property Name="ESTADO" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__tbl_aSEGU__CODIG__660CC658">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_PASO_TRANSACCION" Role="tbl_aSEGUROSEPELIO_PASO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+        <PropertyRef Name="CODIGO_TIPO_TRANSACCION" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_PASO_TRANSACCION">
+        <PropertyRef Name="CODIGO_TIPO_TRANSACCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_aSEGU__ID_CI__5E6BA490">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_PROV" Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_aSEGU__ID_PR__6148113B">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_PROV" Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" Role="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+        <PropertyRef Name="ID_PROV" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT">
+        <PropertyRef Name="ID_PROV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_aSEGUROSEPELIO_CONYUGUE">
+    <Key>
+      <PropertyRef Name="CODIGOCONYUGUE" />
+    </Key>
+    <Property Name="CODIGOCONYUGUE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOSEXO" Type="Int32" />
+    <Property Name="TELEFONO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ID_CIUDAD" Type="Int32" />
+    <Property Name="DIRECCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAREGISTRO" Type="DateTime" Precision="3" />
+    <Property Name="ESTADO" Type="Int32" />
+    <Property Name="APELLIDO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_SEXO" Relationship="panelModel.FK__tbl_aSEGU__CODIG__6CB9C3E7" FromRole="tbl_aSEGUROSEPELIO_CONYUGUE" ToRole="tbl_aSEGUROSEPELIO_SEXO" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__6DADE820" FromRole="tbl_aSEGUROSEPELIO_CONYUGUE" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__587DC110" FromRole="tbl_aSEGUROSEPELIO_CONYUGUE" ToRole="tbl_mSEGUROSEPELIO_TRANSACCION" />
+    <Property Name="FECHANACIMIENTO" Type="DateTime" Precision="0" />
+  </EntityType>
+  <Association Name="FK__tbl_aSEGU__CODIG__6CB9C3E7">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_SEXO" Role="tbl_aSEGUROSEPELIO_SEXO" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE" Role="tbl_aSEGUROSEPELIO_CONYUGUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_SEXO">
+        <PropertyRef Name="CODIGOSEXO" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_CONYUGUE">
+        <PropertyRef Name="CODIGOSEXO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_aSEGU__ID_CI__6DADE820">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE" Role="tbl_aSEGUROSEPELIO_CONYUGUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_CONYUGUE">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_aSEGUROSEPELIO_TERCERO">
+    <Key>
+      <PropertyRef Name="CODIGOTERCERO" />
+    </Key>
+    <Property Name="CODIGOTERCERO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DOCUMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOSEXO" Type="Int32" />
+    <Property Name="TELEFONO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ID_CIUDAD" Type="Int32" />
+    <Property Name="DIRECCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAREGISTRO" Type="DateTime" Precision="3" />
+    <Property Name="ESTADO" Type="Int32" />
+    <Property Name="APELLIDO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_SEXO" Relationship="panelModel.FK__tbl_aSEGU__CODIG__708A54CB" FromRole="tbl_aSEGUROSEPELIO_TERCERO" ToRole="tbl_aSEGUROSEPELIO_SEXO" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Relationship="panelModel.FK__tbl_aSEGU__ID_CI__717E7904" FromRole="tbl_aSEGUROSEPELIO_TERCERO" ToRole="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__5971E549" FromRole="tbl_aSEGUROSEPELIO_TERCERO" ToRole="tbl_mSEGUROSEPELIO_TRANSACCION" />
+  </EntityType>
+  <Association Name="FK__tbl_aSEGU__CODIG__708A54CB">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_SEXO" Role="tbl_aSEGUROSEPELIO_SEXO" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TERCERO" Role="tbl_aSEGUROSEPELIO_TERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_SEXO">
+        <PropertyRef Name="CODIGOSEXO" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_TERCERO">
+        <PropertyRef Name="CODIGOSEXO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_aSEGU__ID_CI__717E7904">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TERCERO" Role="tbl_aSEGUROSEPELIO_TERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="tbl_aSEGUROSEPELIO_TERCERO">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_mSEGUROSEPELIO_TRANSACCION">
+    <Key>
+      <PropertyRef Name="CODIGOTRANSACCION" />
+    </Key>
+    <Property Name="CODIGOTRANSACCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGOCLIENTE" Type="Int32" />
+    <Property Name="NOMBRECLIENTE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_TIPO_TRANSACCION" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ATENTIDO" Type="Int32" />
+    <Property Name="FECHA_ATENCION" Type="DateTime" Precision="0" />
+    <Property Name="FECHA_TRANSACCION" Type="DateTime" Precision="0" />
+    <Property Name="FLAG_CORREO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="USUARIO_ATENCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OBSERVACION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOTIPOPLAN" Type="Int32" />
+    <Property Name="CODIGOCONYUGUE" Type="Int32" />
+    <Property Name="NOMBRECONYUGUE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOTERCERO" Type="Int32" />
+    <Property Name="NOMBRETERCERO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_PROCESO" Type="Int32" />
+    <Property Name="CARGO_TARJETA" Type="Boolean" />
+    <Property Name="CARGO_TARJETA_DIA" Type="Boolean" />
+    <Property Name="TERMINOS_CONDICIONES" Type="Boolean" />
+    <Property Name="ESTADO" Type="Int32" />
+    <Property Name="FECHANACIMIENTO" Type="DateTime" Precision="0" />
+    <Property Name="CERTIFICADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_CONYUGUE" Relationship="panelModel.FK__tbl_mSEGU__CODIG__587DC110" FromRole="tbl_mSEGUROSEPELIO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_CONYUGUE" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TERCERO" Relationship="panelModel.FK__tbl_mSEGU__CODIG__5971E549" FromRole="tbl_mSEGUROSEPELIO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_TERCERO" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TIPO_PLAN" Relationship="panelModel.FK__tbl_mSEGU__CODIG__57899CD7" FromRole="tbl_mSEGUROSEPELIO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_TIPO_PLAN" />
+    <NavigationProperty Name="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Relationship="panelModel.FK__tbl_mSEGU__CODIG__5695789E" FromRole="tbl_mSEGUROSEPELIO_TRANSACCION" ToRole="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" />
+    <NavigationProperty Name="tbl_mSEGUROSEPELIO_CLIENTE" Relationship="panelModel.FK__tbl_mSEGU__CODIG__55A15465" FromRole="tbl_mSEGUROSEPELIO_TRANSACCION" ToRole="tbl_mSEGUROSEPELIO_CLIENTE" />
+    <Property Name="NOMBRETERCERO2" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOTERCERO2" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__tbl_mSEGU__CODIG__587DC110">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE" Role="tbl_aSEGUROSEPELIO_CONYUGUE" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Role="tbl_mSEGUROSEPELIO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_CONYUGUE">
+        <PropertyRef Name="CODIGOCONYUGUE" />
+      </Principal>
+      <Dependent Role="tbl_mSEGUROSEPELIO_TRANSACCION">
+        <PropertyRef Name="CODIGOCONYUGUE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_mSEGU__CODIG__5971E549">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TERCERO" Role="tbl_aSEGUROSEPELIO_TERCERO" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Role="tbl_mSEGUROSEPELIO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_TERCERO">
+        <PropertyRef Name="CODIGOTERCERO" />
+      </Principal>
+      <Dependent Role="tbl_mSEGUROSEPELIO_TRANSACCION">
+        <PropertyRef Name="CODIGOTERCERO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_mSEGU__CODIG__57899CD7">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TIPO_PLAN" Role="tbl_aSEGUROSEPELIO_TIPO_PLAN" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Role="tbl_mSEGUROSEPELIO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_TIPO_PLAN">
+        <PropertyRef Name="CODIGOTIPOPLAN" />
+      </Principal>
+      <Dependent Role="tbl_mSEGUROSEPELIO_TRANSACCION">
+        <PropertyRef Name="CODIGOTIPOPLAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_mSEGU__CODIG__5695789E">
+    <End Type="panelModel.tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Role="tbl_mSEGUROSEPELIO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+        <PropertyRef Name="CODIGO_TIPO_TRANSACCION" />
+      </Principal>
+      <Dependent Role="tbl_mSEGUROSEPELIO_TRANSACCION">
+        <PropertyRef Name="CODIGO_TIPO_TRANSACCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_mSEGU__CODIG__55A15465">
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_CLIENTE" Role="tbl_mSEGUROSEPELIO_CLIENTE" Multiplicity="0..1" />
+    <End Type="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION" Role="tbl_mSEGUROSEPELIO_TRANSACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_mSEGUROSEPELIO_CLIENTE">
+        <PropertyRef Name="CODIGOCLIENTE" />
+      </Principal>
+      <Dependent Role="tbl_mSEGUROSEPELIO_TRANSACCION">
+        <PropertyRef Name="CODIGOCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_mSEGUROSEPELIO_LOG">
+    <Key>
+      <PropertyRef Name="CODIGO_LOG" />
+    </Key>
+    <Property Name="CODIGO_LOG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODIGO_UNICO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOCLIENTE" Type="Int32" />
+    <Property Name="CODIGO_PASO" Type="Int32" />
+    <Property Name="DETALLE_LOG" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_LOG" Type="DateTime" Precision="0" />
+    <Property Name="IP_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

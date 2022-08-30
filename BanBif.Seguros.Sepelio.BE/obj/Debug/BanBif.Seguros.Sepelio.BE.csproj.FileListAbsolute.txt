@@ -1,0 +1,12 @@
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\bin\Debug\BanBif.Seguros.Sepelio.BE.dll
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\bin\Debug\BanBif.Seguros.Sepelio.BE.pdb
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.csproj.AssemblyReference.cache
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.dll
+C:\Users\sebas\OneDrive\Escritorio\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\bin\Debug\BanBif.Seguros.Sepelio.BE.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\bin\Debug\BanBif.Seguros.Sepelio.BE.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.csproj.CoreCompileInputs.cache
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.pdb
+C:\Personal\BanBif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BE\obj\Debug\BanBif.Seguros.Sepelio.BE.csproj.AssemblyReference.cache

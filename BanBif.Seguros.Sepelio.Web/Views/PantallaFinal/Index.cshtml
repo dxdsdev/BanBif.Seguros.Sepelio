@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*CUARTA PANTALLA*@
+<fieldset>
+    <div id="div_pantalla5">
+
+        <b style="font-size:20px">Hola <span style="color:#20A3FF" id="spClienteFinal"></span>,</b>
+        <br />
+
+        <br />
+        <div align="center">
+            <span style="font-size:20px;" id="spResultado">
+                ¡Muchas gracias por elegirnos y confiar en nosotros! Tu seguro está en camino
+            </span>
+        </div>
+        <br />
+        <br />
+        <div align="center">
+            <input type="button" id="btnRefrescar" value="Salir" class="btn btn-next" onclick="Finalizar()" />
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+</fieldset>
+
+<script type="text/javascript">
+
+ 
+    function GenerarUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+
+
+    var dialog;
+
+    $(document).ready(function () {
+        /*SETEAR PASO*/
+        $('#f1').removeClass("active");
+        $('#f2').removeClass("active");
+        $('#f3').addClass("active");
+
+        sessionStorage.setItem("URL", "@ViewBag.URL");
+        sessionStorage.setItem("UID", GenerarUID());
+        sessionStorage.setItem("IP_CLIENTE", '@Request.ServerVariables["REMOTE_ADDR"]');
+
+        var Cliente = {};
+        Cliente.CodigoCliente = sessionStorage.CodCliente;
+
+        $.ajax({
+            url: sessionStorage.URL + '/PantallaFinal/ObtenerNombreCliente',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(Cliente),
+            success: function (response) {
+                console.log(response);
+                if (response.Result) {
+                    $("#spClienteFinal").text(response.Data.NombreCliente);
+                
+                } else {
+                    alertify.error(response.Mensaje);
+                }
+                $.unblockUI();
+            },
+            failure: function (msg) {
+                console.log(msg);
+                $.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                $.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+    });
+
+    function Finalizar() {
+        window.location.href = sessionStorage.URL + "/Login";
+    }
+
+
+</script>

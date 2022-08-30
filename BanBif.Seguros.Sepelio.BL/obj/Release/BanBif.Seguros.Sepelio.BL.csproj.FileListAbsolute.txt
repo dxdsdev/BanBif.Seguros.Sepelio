@@ -1,0 +1,16 @@
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.BL.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.BL.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.BE.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.DA.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\Newtonsoft.Json.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\EntityFramework.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.BE.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.DA.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\BanBif.Seguros.Sepelio.DA.dll.config
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\Newtonsoft.Json.xml
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\bin\Release\EntityFramework.xml
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\obj\Release\BanBif.Seguros.Sepelio.BL.csproj.AssemblyReference.cache
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\obj\Release\BanBif.Seguros.Sepelio.BL.csproj.CoreCompileInputs.cache
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\obj\Release\BanBif.Seguros.Sepelio.BL.dll
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\obj\Release\BanBif.Seguros.Sepelio.BL.pdb
+C:\Personal\Banbif\Innovacion\Sebas\Seguro Sepelio Proyecto\Fuentes\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.BL\obj\Release\BanBif.Seguros.Sepelio.BL.csproj.CopyComplete

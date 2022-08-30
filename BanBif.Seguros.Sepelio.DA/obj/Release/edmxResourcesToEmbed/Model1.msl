@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="panelModelStoreContainer" CdmEntityContainer="panelEntities">
+    <EntitySetMapping Name="Seguridad_Aplicacion">
+      <EntityTypeMapping TypeName="panelModel.Seguridad_Aplicacion">
+        <MappingFragment StoreEntitySet="Seguridad_Aplicacion">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idAplicacion" ColumnName="idAplicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGURIDAD_TERMINOS_CONDICIONES">
+      <EntityTypeMapping TypeName="panelModel.SEGURIDAD_TERMINOS_CONDICIONES">
+        <MappingFragment StoreEntitySet="SEGURIDAD_TERMINOS_CONDICIONES">
+          <ScalarProperty Name="CONTENIDO_3" ColumnName="CONTENIDO_3" />
+          <ScalarProperty Name="CONTENIDO_2" ColumnName="CONTENIDO_2" />
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
+          <ScalarProperty Name="APLICACION_ID" ColumnName="APLICACION_ID" />
+          <ScalarProperty Name="TERMINOS_ID" ColumnName="TERMINOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_PASO_TRANSACCION">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_PASO_TRANSACCION">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_PASO_TRANSACCION">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="CODIGO_TIPO_TRANSACCION" ColumnName="CODIGO_TIPO_TRANSACCION" />
+          <ScalarProperty Name="CODIGO_PASO" ColumnName="CODIGO_PASO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_SEXO">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_SEXO">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_SEXO">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGOSEXO" ColumnName="CODIGOSEXO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_TIPO_PLAN">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_TIPO_PLAN">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_TIPO_PLAN">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCIONTIPOPLAN" ColumnName="DESCRIPCIONTIPOPLAN" />
+          <ScalarProperty Name="CODIGOTIPOPLAN" ColumnName="CODIGOTIPOPLAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_TIPO_TRANSACCION">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGO_TIPO_TRANSACCION" ColumnName="CODIGO_TIPO_TRANSACCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_UBIGEO_CIUDAD">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="NOMBRE_CIUDAD" ColumnName="NOMBRE_CIUDAD" />
+          <ScalarProperty Name="UBIGEO_CIUDAD" ColumnName="UBIGEO_CIUDAD" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_UBIGEO_DISTRIT">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="NOMBRE_DIST" ColumnName="NOMBRE_DIST" />
+          <ScalarProperty Name="UBIGEO_DIST" ColumnName="UBIGEO_DIST" />
+          <ScalarProperty Name="ID_PROV" ColumnName="ID_PROV" />
+          <ScalarProperty Name="ID_DIST" ColumnName="ID_DIST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_UBIGEO_PROV">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="NOMBRE_PROV" ColumnName="NOMBRE_PROV" />
+          <ScalarProperty Name="UBIGEO_PROV" ColumnName="UBIGEO_PROV" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="ID_PROV" ColumnName="ID_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mSEGUROSEPELIO_CLIENTE">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSEGUROSEPELIO_CLIENTE">
+        <MappingFragment StoreEntitySet="tbl_mSEGUROSEPELIO_CLIENTE">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="COMPROBACION" ColumnName="COMPROBACION" />
+          <ScalarProperty Name="TIENESEGURO" ColumnName="TIENESEGURO" />
+          <ScalarProperty Name="NUMEROCUENTA" ColumnName="NUMEROCUENTA" />
+          <ScalarProperty Name="NROTARJETA" ColumnName="NROTARJETA" />
+          <ScalarProperty Name="TIPOPRODUCTO" ColumnName="TIPOPRODUCTO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOCLIENTE" ColumnName="CODIGOCLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mSEGUROSEPELIO_TOKEN">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSEGUROSEPELIO_TOKEN">
+        <MappingFragment StoreEntitySet="tbl_mSEGUROSEPELIO_TOKEN">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="VALIDADO" ColumnName="VALIDADO" />
+          <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="CODIGOTOKEN" ColumnName="CODIGOTOKEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_CONYUGUE">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_CONYUGUE">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_CONYUGUE">
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CODIGOSEXO" ColumnName="CODIGOSEXO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOCONYUGUE" ColumnName="CODIGOCONYUGUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSEGUROSEPELIO_TERCERO">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSEGUROSEPELIO_TERCERO">
+        <MappingFragment StoreEntitySet="tbl_aSEGUROSEPELIO_TERCERO">
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CODIGOSEXO" ColumnName="CODIGOSEXO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOTERCERO" ColumnName="CODIGOTERCERO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mSEGUROSEPELIO_TRANSACCION">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSEGUROSEPELIO_TRANSACCION">
+        <MappingFragment StoreEntitySet="tbl_mSEGUROSEPELIO_TRANSACCION">
+          <ScalarProperty Name="CODIGOTERCERO2" ColumnName="CODIGOTERCERO2" />
+          <ScalarProperty Name="NOMBRETERCERO2" ColumnName="NOMBRETERCERO2" />
+          <ScalarProperty Name="CERTIFICADO" ColumnName="CERTIFICADO" />
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TERMINOS_CONDICIONES" ColumnName="TERMINOS_CONDICIONES" />
+          <ScalarProperty Name="CARGO_TARJETA_DIA" ColumnName="CARGO_TARJETA_DIA" />
+          <ScalarProperty Name="CARGO_TARJETA" ColumnName="CARGO_TARJETA" />
+          <ScalarProperty Name="CODIGO_PROCESO" ColumnName="CODIGO_PROCESO" />
+          <ScalarProperty Name="NOMBRETERCERO" ColumnName="NOMBRETERCERO" />
+          <ScalarProperty Name="CODIGOTERCERO" ColumnName="CODIGOTERCERO" />
+          <ScalarProperty Name="NOMBRECONYUGUE" ColumnName="NOMBRECONYUGUE" />
+          <ScalarProperty Name="CODIGOCONYUGUE" ColumnName="CODIGOCONYUGUE" />
+          <ScalarProperty Name="CODIGOTIPOPLAN" ColumnName="CODIGOTIPOPLAN" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="USUARIO_ATENCION" ColumnName="USUARIO_ATENCION" />
+          <ScalarProperty Name="FLAG_CORREO" ColumnName="FLAG_CORREO" />
+          <ScalarProperty Name="FECHA_TRANSACCION" ColumnName="FECHA_TRANSACCION" />
+          <ScalarProperty Name="FECHA_ATENCION" ColumnName="FECHA_ATENCION" />
+          <ScalarProperty Name="ATENTIDO" ColumnName="ATENTIDO" />
+          <ScalarProperty Name="CODIGO_TIPO_TRANSACCION" ColumnName="CODIGO_TIPO_TRANSACCION" />
+          <ScalarProperty Name="NOMBRECLIENTE" ColumnName="NOMBRECLIENTE" />
+          <ScalarProperty Name="CODIGOCLIENTE" ColumnName="CODIGOCLIENTE" />
+          <ScalarProperty Name="CODIGOTRANSACCION" ColumnName="CODIGOTRANSACCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_SEGUROSEPELIO_ACTUALIZACONSENTIMIENTO" FunctionName="panelModel.Store.SP_SEGUROSEPELIO_ACTUALIZACONSENTIMIENTO" />
+    <EntitySetMapping Name="tbl_mSEGUROSEPELIO_LOG">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSEGUROSEPELIO_LOG">
+        <MappingFragment StoreEntitySet="tbl_mSEGUROSEPELIO_LOG">
+          <ScalarProperty Name="IP_CLIENTE" ColumnName="IP_CLIENTE" />
+          <ScalarProperty Name="FECHA_LOG" ColumnName="FECHA_LOG" />
+          <ScalarProperty Name="DETALLE_LOG" ColumnName="DETALLE_LOG" />
+          <ScalarProperty Name="CODIGO_PASO" ColumnName="CODIGO_PASO" />
+          <ScalarProperty Name="CODIGOCLIENTE" ColumnName="CODIGOCLIENTE" />
+          <ScalarProperty Name="CODIGO_UNICO" ColumnName="CODIGO_UNICO" />
+          <ScalarProperty Name="CODIGO_LOG" ColumnName="CODIGO_LOG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

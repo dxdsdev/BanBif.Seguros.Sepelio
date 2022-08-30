@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MicroSeguro Sepelio - BanBif</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/form-elements.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/fonts/fonts.css">
+    <link href="~/assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/favicon.ico">
+
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="~/assets/fonts/fonts.css"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#formfloat input').focusout(function() {
+                var text_value = $(this).val();
+
+                if (text_value === "") {
+                    $(this).removeClass('float-label');
+                } else {
+                    $(this).addClass('float-label');
+                }
+            });
+        });
+    </script>
+
+</head>
+<body id="ldg_crm">
+    <!--<nav id="ldg_crm_nav" class="bg-blanco">
+        <div class="centrado">
+            <img class="logo-bif" src="./assets/img/logo-cyan.png">
+        </div>
+    </nav>-->
+    <nav id="ldg_crm_nav" class="bg-cyan">
+        <div class="centrado">
+            <a href="https://banbif.com.pe/"><img class="logo-bif" src="~/assets/img/logo-blanco.png" alt="logo"></a>
+        </div>
+    </nav>
+
+    <section id="ldg_crm_form">
+        <div class="gracias col-xs-12 col-sm-10 col-md-7 col-lg-6 auto-0">
+
+            <h2><strong>Proceso de solicitud de afiliación finalizado.</strong></strong></h2>
+
+            <p>Gracias por elegirnos y confiar en nosotros.</p><p>En los próximos 2 días hábiles recibirás un correo a tu buzón confirmando tu afiliación al Microseguro de Sepelio.</p>
+
+            <a class="btn btn-next bt-1 mb-2 mt-2" href="http://www.banbif.com.pe">Conoce más de nuestros seguros</a>
+
+          
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <script>
+
+         function RegistrarLog(request) {
+            request.CodigoUnico = sessionStorage.UID;
+            request.IpCliente = sessionStorage.IP_CLIENTE;
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            $.ajax({
+                url: sessionStorage.URL + '/Home/RegistrarLog',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(request),
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+
+        //function GenerarUID() {
+        //    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        //        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        //        return v.toString(16);
+        //    });
+        //}
+
+        $(document).ready(function () {
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+         
+            console.log(sessionStorage.CodCliente);
+            //if (sessionStorage.CodCliente == undefined) {
+            //    window.location.href = sessionStorage.URL;
+            //}
+            //else {
+            //    var LogRequest = {};
+            //    LogRequest.CodigoCliente = sessionStorage.CodCliente;
+            //    LogRequest.CodigoPaso = 7;
+            //    LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: FIN DE FLUJO | STATUS: TRUE | JSON: FIN DEL FLUJO";
+            //    RegistrarLog(LogRequest);
+            //}
+        });
+
+          // Portfolio details carousel
+  $(".portfolio-details-carousel").owlCarousel({
+       autoplay:true,
+       autoplayHoverPause:true,
+       items:4,
+       nav:true,
+       dots:true,
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true,
+            autoplay:true,
+          },
+          600: {
+            items: 1,
+            nav: true,
+            autoplay:true,
+          },
+          1000: {
+            items: 1,
+            nav: true,
+            loop: true,
+            autoplay:true,
+            margin: 20
+          }
+        }
+  });
+    </script>
+
+</body>
+
+</html>

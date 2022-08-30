@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{432FFC99-D7B7-45FA-8D98-D1D95594C2BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BanBif.Seguros.Sepelio.BE</RootNamespace>
+    <AssemblyName>BanBif.Seguros.Sepelio.BE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ciudad\ListaCiudadResponse.cs" />
+    <Compile Include="Ciudad\ListaCiudadResult.cs" />
+    <Compile Include="Ciudad\Ciudad.cs" />
+    <Compile Include="Cliente\ClientesBE.cs" />
+    <Compile Include="Cliente\ListaNroTarjetaResponse.cs" />
+    <Compile Include="Cliente\ListaNroTarjetaResult.cs" />
+    <Compile Include="Cliente\NroTarjeta.cs" />
+    <Compile Include="Cliente\ObtenerLoginRequest.cs" />
+    <Compile Include="Cliente\ObtenerLoginResponse.cs" />
+    <Compile Include="Cliente\ObtenerLoginResult.cs" />
+    <Compile Include="Cliente\ObtenerNombreClienteRequest.cs" />
+    <Compile Include="Cliente\ObtenerNombreClienteResponse.cs" />
+    <Compile Include="Cliente\ObtenerNombreClienteResult.cs" />
+    <Compile Include="Cliente\ObtenerNroTarjetaRequest.cs" />
+    <Compile Include="Contenido\Contenido.cs" />
+    <Compile Include="Contenido\ObtenerContenidoRequest.cs" />
+    <Compile Include="Contenido\ObtenerContenidoResponse.cs" />
+    <Compile Include="Contenido\ObtenerContenidoResult.cs" />
+    <Compile Include="Conyugues\ConyuguesBE.cs" />
+    <Compile Include="Conyugues\ObtenerDatosConyugueResponse.cs" />
+    <Compile Include="Conyugues\ObtenerDatosConyugueResult.cs" />
+    <Compile Include="Correo\CorreoDataCliente.cs" />
+    <Compile Include="Correo\CorreoRequest.cs" />
+    <Compile Include="Correo\CorreoResponse.cs" />
+    <Compile Include="Correo\EnviarRequest.cs" />
+    <Compile Include="Desafiliacion\DesafiliacionRequest.cs" />
+    <Compile Include="Distrito\ListarDistritoRequest.cs" />
+    <Compile Include="Distrito\ListarDistritoResponse.cs" />
+    <Compile Include="Distrito\ListarDistritoResult.cs" />
+    <Compile Include="Distrito\Distrito.cs" />
+    <Compile Include="Log\RegistrarLogRequest.cs" />
+    <Compile Include="Log\RegistrarLogResponse.cs" />
+    <Compile Include="Log\RegistrarLogResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provincia\ListarProvinciaRequest.cs" />
+    <Compile Include="Provincia\ListarProvinciaResponse.cs" />
+    <Compile Include="Provincia\ListarProvinciaResult.cs" />
+    <Compile Include="Provincia\Provincia.cs" />
+    <Compile Include="Sexo\ListaSexoResponse.cs" />
+    <Compile Include="Sexo\ListaSexoResult.cs" />
+    <Compile Include="Sexo\Sexo.cs" />
+    <Compile Include="Terceros\TercerosBE.cs" />
+    <Compile Include="TipoPlan\TipoPlan.cs" />
+    <Compile Include="TipoPlan\ListaTipoPlanResponse.cs" />
+    <Compile Include="TipoPlan\ListaTipoPlanResult.cs" />
+    <Compile Include="Token\TokenRequest.cs" />
+    <Compile Include="Token\TokenResponse.cs" />
+    <Compile Include="Transaccion\ObtenerCantidadConyuguesRequest.cs" />
+    <Compile Include="Transaccion\ObtenerCantidadResponse.cs" />
+    <Compile Include="Transaccion\ObtenerCantidadResult.cs" />
+    <Compile Include="Transaccion\ObtenerTransaccionRequest.cs" />
+    <Compile Include="Transaccion\ObtenerTransaccionResponse.cs" />
+    <Compile Include="Transaccion\ObtenerTransaccionConyugueResult.cs" />
+    <Compile Include="Transaccion\TransaccionRequest.cs" />
+    <Compile Include="Transaccion\TransaccionResponse.cs" />
+    <Compile Include="Transaccion\TransaccionResult.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

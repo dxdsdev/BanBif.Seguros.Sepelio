@@ -1,0 +1,390 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MicroSeguro Sepelio - BanBif</title>
+
+    <!-- CSS -->
+    <link href="~/assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/form-elements.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/fonts/fonts.css">
+    <link href="~/assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,600,700" rel="stylesheet">
+    <link href="~/assets/css/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/assets/css/alertifyjs/default.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/favicon.ico">
+    <script src="~/assets/js/alertifyjs/alertify.min.js"></script>
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <script src="~/assets/fonts/fonts.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('#formfloat input').focusout(function () {
+                var text_value = $(this).val();
+
+                if (text_value === "") {
+                    $(this).removeClass('float-label');
+                } else {
+                    $(this).addClass('float-label');
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+        function Cargando() {
+            $('#process-data-loader').show();
+        }
+    </script>
+</head>
+<body id="ldg_crm">
+    <div id="ModalLoading" style="display: none;">
+        <span>
+            <img src="~/assets/img/loading2.gif" width="25" height="25" /> Cargando ....
+        </span>
+    </div>
+    <nav id="ldg_crm_nav" class="bg-cyan">
+        <div class="centrado">
+            <a href="https://banbif.com.pe/"><img class="logo-bif" src="~/assets/img/logo-blanco.png" alt="logo"></a>
+        </div>
+    </nav>
+    <section id="ldg_crm_bnn-form">
+        <div class="centrado">
+            <div class="col-xs-7 col-md-6 col-lg-6">
+                <img class="logo-hola" src="~/assets/img/img_HOLA.png" alt="logo">
+                <h1>Microseguro de Sepelio</h1>
+
+                <div id="ldg_crm_bnn-form_beneficios" class="portfolio-details-container">
+                    <div class="owl-carousel portfolio-details-carousel">
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Indemnización por fallecimiento.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Adquiérelo desde S/4.50 mensual.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Recibe una indemnización adicional por muerte accidental.</p>
+                            </div>
+                        </div>
+                        <div class="card ml-2 mr-2">
+
+                            <div class="card-body">
+                                <p>Desamparo Familiar Súbito</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 col-md-6 col-lg-6"><img class="grafica" src="~/assets/img/grafica.png" alt="grafica"></div>
+        </div>
+    </section>
+    <section id="ldg_crm_form">
+        <div id="formfloat" class="form-box col-xs-12 col-sm-10 col-md-5 col-lg-5">
+
+            <h2>Obtén tu <strong>Microseguro de Sepelio</strong> en instantes</h2>
+            <p>Para comenzar, identifícate como cliente BanBif</p>
+            <div class="formulario">
+                <div class="input-box col-xs-12 col-md-8 col-sm-8 auto-0">
+                    <input id="documento" type="text" name="documento" required autocomplete="off" maxlength="10" onkeypress="return soloNumeros(event)">
+                    <label>Nº de DNI</label>
+                </div>
+            </div>
+            
+            <div style="width:304px; height:78px; margin:10px auto">
+                <div class="g-recaptcha" data-sitekey="6LePgKMUAAAAAK96lIyje7v2UFzIC33loqabo38N" style="text-align:center"></div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="ValidarTratamientoDatos" />
+                        <i class="input-helper"></i>
+                        <p style="padding: 0;">He leído y acepto la <a href="https://www.banbif.com.pe/Portals/0/PDF/CONSENTIMIENTO-DE-DATOS-PERSONALES.pdf" target="_blank"> Política de Tratamiento de Protección de Datos Personales.</a></p>
+                    </label>
+                </div>
+                <div class="f1-buttons">
+                    <a id="mymodal" style="float:none" class="btn btn-next bt-1">Continuar</a>
+                </div>
+                <div id="process-data-loader" class="notdisplay">
+                    <img src="~/assets/img/ajax-loader.gif" />
+                    <label>Validando credenciales...</label>
+                </div>
+            </div>
+            
+
+
+
+            <!-- Modal identificación-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-0" style="margin-bottom: 0">Ingresa el código enviado a tu correo electrónico</p>
+
+                            <div class="input-box col-xs-12 col-md-8 col-sm-8 auto-0 text-center mb-1">
+                                <input id="token" type="text" name="token" maxlength="4" onkeypress="return soloNumeros(event)" required autocomplete="off">
+                            </div>
+                            <a id="ValidaToken" type="button" class="btn btn-next">Continuar</a>
+                            <br><span>¿No recibiste el código? <a href="#">Reenviar código</a></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/assets/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/assets/js/Validaciones.js"></script>
+
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <script>
+        var NroDocumento = "";
+
+        function RegistrarLog(request) {
+            request.CodigoUnico = sessionStorage.UID;
+            request.IpCliente = sessionStorage.IP_CLIENTE;
+            sessionStorage.setItem("URL", "@ViewBag.URL");
+            $.ajax({
+                url: sessionStorage.URL + '/Home/RegistrarLog',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(request),
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+
+        function GenerarUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+
+        $(document).ready(function () {
+            $("#mymodal").click(function () {
+                $('#mymodal').hide();
+                if ($("#documento").val() == "") {
+                   // alert('Por favor, debes de ingresar el número de tu DNI.');
+                    swal("¡Hola!", "Por favor, debes de ingresar el número de tu DNI.", "error");
+                    $('#process-data-loader').hide();
+                    return false;
+                }
+
+                var response = grecaptcha.getResponse();
+
+                if (response.length == 0) {
+                    swal("¡Hola!", "Captcha no validado.", "error");
+                    $('#process-data-loader').hide();
+                    return false;
+                }
+
+
+                sessionStorage.setItem("URL", "@ViewBag.URL");
+                sessionStorage.setItem("UID", GenerarUID());
+                sessionStorage.setItem("IP_CLIENTE", '@Request.ServerVariables["REMOTE_ADDR"]');
+                var oBE = {};
+                oBE.NumeroDocumento = $("#documento").val();
+                oBE.NroTarjeta = "";
+                if ($('#ValidarTratamientoDatos').prop('checked')) {
+                    oBE.FlagConsentimiento = 1;
+                }
+                else {
+                    oBE.FlagConsentimiento = 0;
+                }
+
+                NroDocumento = oBE.NumeroDocumento;
+                sessionStorage.setItem("Documento", NroDocumento);
+                //FN_Loading();
+                $.ajax({
+                    url: sessionStorage.URL + '/Home/ValidarLogin',
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    processData: true,
+                    data: JSON.stringify(oBE),
+                    success: function (response) {
+                        console.log(response);
+                        if (response.Result) {
+
+                            sessionStorage.setItem("CodCliente", response.Data.CodigoCliente);
+                            sessionStorage.setItem("PlanSeguro", response.Data.PlanSeguro);
+                            sessionStorage.setItem("Correo", response.Data.Correo);
+
+                            if (response.Data.TieneSeguro) {
+                                if (response.Data.Atendido == 0) {
+                                    swal("¡Hola!", "Tu afiliación del microseguro de Sepelio se encuentra en proceso", "success");
+                                    $('#process-data-loader').hide();
+                                    $('#mymodal').show();
+                                }
+                                else {
+                                    var LogRequest = {};
+                                    LogRequest.CodigoCliente = response.Data.CodigoCliente;
+                                    LogRequest.CodigoPaso = 8;
+                                    LogRequest.DetalleLog = "PROCESO: DESAFILIACION | METODO: LOGIN | STATUS: TRUE | JSON: " + JSON.stringify(oBE);
+                                    RegistrarLog(LogRequest);
+                                    window.location.href = sessionStorage.URL + "/Desafiliacion";
+                                }
+
+                            }
+                            else {
+                                //GRABAR LOG
+                                var LogRequest = {};
+                                LogRequest.CodigoCliente = response.Data.CodigoCliente;
+                                LogRequest.CodigoPaso = 1;
+                                LogRequest.DetalleLog = "PROCESO: AFILIACION | METODO: LOGIN | STATUS: TRUE | JSON: " + JSON.stringify(oBE);
+                                RegistrarLog(LogRequest);
+                                $('#process-data-loader').hide();
+                                $('#mymodal').show();
+                                window.location.href = sessionStorage.URL + "/PlanesSeguro";
+                            }
+                        } else {
+
+                            swal("¡Hola!", response.Mensaje, "error");
+                            setTimeout(function () {
+                                window.location.href = "https://www.reinventabanbif.pe/Multiseguros/";
+                            }, 10000);
+                            $('#process-data-loader').hide();
+                            $('#mymodal').show();
+                        }
+                       // $.unblockUI();
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+                     //    $.unblockUI();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                       //      $.unblockUI();
+                    },
+                    complete: function () {
+                      //  $.unblockUI();
+
+                    }
+                });
+
+                //
+            });
+
+
+        });
+
+
+
+    </script>
+    <script type="text/javascript">
+        function FN_Loading() {
+
+            $.blockUI({
+                message: $("#ModalLoading"),
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000000',
+                    '-webkit-border-radius': '50px',
+                    '-moz-border-radius': '50px',
+                    opacity: .7,
+                    color: '#fff'
+                },
+                baseZ: 2000
+
+            });
+        }
+    </script>
+    <script>
+        // Portfolio details carousel
+        $(".portfolio-details-carousel").owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            items: 4,
+            nav: true,
+            dots: true,
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                600: {
+                    items: 1,
+                    nav: true,
+                    autoplay: true,
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true,
+                    autoplay: true,
+                    margin: 20
+                }
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
