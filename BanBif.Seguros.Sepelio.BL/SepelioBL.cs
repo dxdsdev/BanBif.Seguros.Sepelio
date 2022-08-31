@@ -498,8 +498,8 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<body>";
             strHTML += "<div style='background-color: #f5f4f5;text-align: center;'>";
-  strHTML += "<table style='border: 0;' bgcolor='#ffffff' align='center' width='640' cellpadding='0' cellspacing='0' border='0'>";
-    strHTML += "<tr>";
+            strHTML += "<table style='border: 0;' bgcolor='#ffffff' align='center' width='640' cellpadding='0' cellspacing='0' border='0'>";
+            strHTML += "<tr>";
             strHTML += "<td width='100%' style='border: none;'><img src='https://www.reinventabanbif.pe/SimuladorDPL/content/mail/header.png' alt='' style='border: none;max-width: 100%;width: 100%;display: block'></td>";
             strHTML += "</tr>";
             strHTML += "<tr>";
@@ -509,8 +509,11 @@ namespace BanBif.Seguros.Sepelio.BL
             strHTML += "<td height='30' style='line-height: 30px'>&nbsp;</td>";
             strHTML += "</tr>";
             strHTML += "<tr>";
-            strHTML += "<td align='center' style='border: none;'><span style='font-size: 26px;font-family: arial;color: #4d4d4d'>  "+ solicitud.Nombres + " ,</span></td>";
-    strHTML += "</tr>";
+            strHTML += "<td align='center' style='border: none;'><span style='font-size: 26px;font-family: arial;color: #4d4d4d'>  "+ solicitud.Nombres ;
+
+            strHTML += " ,</span></td>";
+
+            strHTML += "</tr>";
             strHTML += "<tr>";
             strHTML += "<td height='20' style='line-height: 20px'>&nbsp;</td>";
             strHTML += "</tr>";
@@ -519,7 +522,7 @@ namespace BanBif.Seguros.Sepelio.BL
             strHTML += "<tr>";
             strHTML += "<td align='center'><span style='font-size: 18px;font-family: arial;color: #606060'>Tu seguridad es <strong>muy importante</strong> para nosotros</span></td>";
 
-         strHTML += "</tr>";
+            strHTML += "</tr>";
 
             strHTML += "</table></td>";
 
@@ -535,11 +538,11 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td bgcolor='#ffffff'><table style='border: 0;' align='center' width='450' cellpadding='0' cellspacing='0' border='0'>";
 
-         strHTML += "<tr>";
+            strHTML += "<tr>";
 
             strHTML += "<td valign='middle' style='background: #eef8ff; padding: 0; border-radius: 5px;'><table align='center' width='420' cellpadding='0' cellspacing='0' border='0'>";
 
-               strHTML += "<tr>";
+            strHTML += "<tr>";
 
             strHTML += "<td height='20' ></td>";
 
@@ -557,9 +560,9 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td width='20' ></td>";
 
-            strHTML += "<td align='left' style=''><span style='font-family: Helvetica, Arial, 'sans-serif'; font-size: 17px; color: #24a3fc'>Te comentamos que tu<strong> Seguro de Sepelio</strong> de <strong></strong> fue afiliado con &eacute; xito. </span></td>";
+            strHTML += "<td align='left' style=''><span style='font-family: Helvetica, Arial, 'sans-serif'; font-size: 17px; color: #24a3fc'>Te comentamos que tu<strong> Seguro de Sepelio</strong> de <strong></strong> fue afiliado con &eacute;xito. </span></td>";
  
-                         strHTML += "<td width='20' ></td>";
+            strHTML += "<td width='20' ></td>";
 
             strHTML += "</tr>";
 
@@ -593,8 +596,10 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<tr>";
 
-            strHTML += "<td align='center'><span style='font-size: 13px;font-family: arial;color: #606060'>Fecha de Afiliaci&oacute; n: DD-MM-AAAA </span></td>";
-  
+            strHTML += "<td align='center'><span style='font-size: 13px;font-family: arial;color: #606060'>Fecha de Afiliaci&oacute;n: "+  DateTime.Now.ToString("dd-MM-yyyy") ;
+
+            strHTML += "</span></td>";
+
             strHTML += "</tr>";
 
             strHTML += "</table></td>";
@@ -613,28 +618,65 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<tr>";
 
-            strHTML += "<td align='center'><span style='font-size: 16px;font-family: arial;color: #20a6ff'><strong>Valor del plan del seguro: S/ 9.5 al mes</strong> </span></td>";
- 
-           strHTML += "</tr>";
+            if (solicitud.CantidadTerceros == 1) //Plan Titular
+            {
+                strHTML += "<td align='center'><span style='font-size: 16px;font-family: arial;color: #20a6ff'><strong>Valor del plan del seguro: S/ 4.50 al mes</strong> </span></td>";
 
-            strHTML += "</table></td>";
+                strHTML += "</tr>";
 
-            strHTML += "</tr>";
+                strHTML += "</table></td>";
 
-            strHTML += "<tr>";
+                strHTML += "</tr>";
 
-            strHTML += "<td height='10' style='line-height: 10px'>&nbsp;</td>";
+                strHTML += "<tr>";
 
-            strHTML += "</tr>";
+                strHTML += "<td height='10' style='line-height: 10px'>&nbsp;</td>";
 
-            strHTML += "<tr>";
+                strHTML += "</tr>";
 
-            strHTML += "<td align='center' style='border: none;' ><table cellpadding='0' cellspacing='0' border='0' width='70%'>";
+                strHTML += "<tr>";
 
-            strHTML += "<tr>";
+                strHTML += "<td align='center' style='border: none;' ><table cellpadding='0' cellspacing='0' border='0' width='70%'>";
 
-            strHTML += "<td align='center'><span style='font-size: 14px;font-family: arial;color: #606060'>Xxxxx Xxxxx en donde se cargar&aacute; el valor del plan del seguro: <br>";
-               strHTML += "************XXXXX </span></td>";
+                strHTML += "<tr>";
+
+                strHTML += "<td align='center'><span style='font-size: 14px;font-family: arial;color: #606060'>Tarjeta de crédito o nro de cuenta en donde se cargar&aacute; el valor del plan del seguro: <br>";
+
+                strHTML += "**** **** **** " + solicitud.NroProducto;
+
+                strHTML += "</span></td>";
+
+            }
+            else
+            {
+                strHTML += "<td align='center'><span style='font-size: 16px;font-family: arial;color: #20a6ff'><strong>Valor del plan del seguro: S/ 9.5 al mes</strong> </span></td>";
+
+                strHTML += "</tr>";
+
+                strHTML += "</table></td>";
+
+                strHTML += "</tr>";
+
+                strHTML += "<tr>";
+
+                strHTML += "<td height='10' style='line-height: 10px'>&nbsp;</td>";
+
+                strHTML += "</tr>";
+
+                strHTML += "<tr>";
+
+                strHTML += "<td align='center' style='border: none;' ><table cellpadding='0' cellspacing='0' border='0' width='70%'>";
+
+                strHTML += "<tr>";
+
+                strHTML += "<td align='center'><span style='font-size: 14px;font-family: arial;color: #606060'>Tarjeta de crédito o nro de cuenta en donde se cargar&aacute; el valor del plan del seguro: <br>";
+
+                strHTML += "**** **** **** " + solicitud.NroProducto ;
+
+                strHTML += "</span></td>";
+
+            }            
+
 
             strHTML += "</tr>";
 
@@ -656,13 +698,13 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td align='left'><br>";
 
-            strHTML += "<span style='font-size: 11px;font-family: arial;color: #000; text-align: justify; line-height: 12px; display: block;'>La aseguradora, proceder&aacute; en enviarte el certificado del Seguro Protecci&oacute; n de Tarjetas Cyber a este correo electr&oacute; nico registrado dentro de los siguientes 5 d&iacute;as h&aacute; biles. <br>";
+            strHTML += "<span style='font-size: 11px;font-family: arial;color: #000; text-align: justify; line-height: 12px; display: block;'>La aseguradora, proceder&aacute; en enviarte el certificado del Seguro de Sepelio a este correo electr&oacute;nico registrado dentro de los siguientes 5 d&iacute;as h&aacute;biles. <br>";
     
-                  strHTML += "<br>";
-            strHTML += "El primer cargo del plan del seguro ser&aacute; cobrado en l&iacute; nea el d&iacute; a de hoy.Las fechas de cobro de las primas de tu Seguro Protecci&oacute; n de Tarjetas Cyber, ser&aacute; la correspondiente al d&iacute; a de la afiliaci&oacute; n del seguro contratado y ser&aacute; n cargadas mensualmente. <br>";
+            strHTML += "<br>";
+            strHTML += "El primer cargo del plan del seguro ser&aacute; cobrado en l&iacute;nea el d&iacute;a de hoy.Las fechas de cobro de las primas de tu Seguro de Sepelio, ser&aacute; la correspondiente al d&iacute;a de la afiliaci&oacute;n del seguro contratado y ser&aacute;n cargadas mensualmente. <br>";
 
             strHTML += "<br>";
-            strHTML += "Recuerda que puedes ejercer tu derecho de arrepentimiento para resolver el contrato sin expresi&oacute; n de causa ni penalidad alguna dentro de los 15 d&iacute;as posteriores a la fecha de recepci&oacute; n de la p&oacute; liza y podr&aacute; s hacerlo a trav&eacute; s de los mecanismos de forma, lugar y medios que usaste para la contrataci&oacute; n del seguro.El ejercicio de tu derecho de arrepentimiento procede si no haces uso de las coberturas y/o asistencias.En caso hayas ejercido tu derecho de arrepentimiento luego de haber pagado el total o parte de la prima, la aseguradora proceder&aacute; a la devoluci&oacute; n de esta dentro de los treinta(30) d&iacute;as siguientes. </span><br></td>";
+            strHTML += "Recuerda que puedes ejercer tu derecho de arrepentimiento para resolver el contrato sin expresi&oacute;n de causa ni penalidad alguna dentro de los 15 d&iacute;as posteriores a la fecha de recepci&oacute;n de la p&oacute;liza y podr&aacute;s hacerlo a trav&eacute;s de los mecanismos de forma, lugar y medios que usaste para la contrataci&oacute; n del seguro.El ejercicio de tu derecho de arrepentimiento procede si no haces uso de las coberturas y/o asistencias.En caso hayas ejercido tu derecho de arrepentimiento luego de haber pagado el total o parte de la prima, la aseguradora proceder&aacute; a la devoluci&oacute; n de esta dentro de los treinta(30) d&iacute;as siguientes. </span><br></td>";
 
             strHTML += "</tr>";
 
@@ -684,7 +726,7 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td width='600'><p style='margin: 30px 0px 0px 0px; border-top: 2px  solid #000000; line-height: 0px;'>&nbsp;</p></td>";
             
-                            strHTML += "</tr>";
+            strHTML += "</tr>";
 
             strHTML += "</table></td>";
 
@@ -710,9 +752,9 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td width='100' align='left' valign='top'><p style='text-align: justify; margin: 0px, 0px, 0px;'><img src='https://www.reinventabanbif.pe/SimuladorDPL/content/mail/tea.png' alt='' style='border: none;'></p></td>";
 
-            strHTML += "<td width='600' align='justify'><p style='text-align: justify; margin-top: 10px; margin-bottom: 10px; margin-left: 10px;'><span style='color: #6e6e6e;font-size: 11px;text-align: justify;font-family: arial;display:block;'>En caso de consultas, reclamos y/o siniestros llamar a la Central de Atenci&oacute; n al Cliente de Chubb Per&uacute; al 417-5000(Lima), escribe a atencion.seguros @ chubb.com , ingresa a la p&aacute; gina web www.chubb.com.pe y/o visita la oficina ubicada en Calle Amador Merino Reyna N&deg; 267 Oficina 402, San Isidro. Aplican exclusiones detalladas en la p&oacute; liza.El plazo para la atenci&oacute; n de consultas y/o reclamos es de 30 d&iacute;as contando desde la presentaci&oacute; n del reclamo y/o consulta, sin que ello implique caducidad de su derecho. Para mayor informaci&oacute; n puedes ingresar a la p&aacute; gina web www.BaniBf.com.pe y/o www.Chubb.com / pe.Este seguro ofrecido por CHUBB PERU S.A.puede ser adquirido en las oficinas de BanBif. BanBif no se responsabiliza legalmente por la disponibilidad, idoneidad, calidad, condiciones, entrega, exclusiones, daño o perjuicio respecto a los seguros ofrecidos por CHUBB.La presente informaci&oacute; n es parcial y no constituye las condiciones de la P&oacute; liza, prevaleciendo los t&eacute; rminos del contrato suscrito ante CHUBB y el adquirente del seguro.BanBif interviene en calidad de comercializador del Seguro Protecci&oacute; n de Tarjetas Cyber de CHUBB, conforme al Reglamento de Comercializaci&oacute; n de Productos de Seguros Res. SBS N&deg; 1121-2017, Ley Complementaria a la Ley de Protecci&oacute; n al Consumidor en Materia de Servicios Financieros Ley N&deg; 28587 y sus normas modificatorias, as&iacute; como el Reglamento de Gesti&oacute; n de Conducta de Mercado aprobado por Res. SBS N&deg; 3274-2017 y sus modificatorias.Informaci&oacute; n sobre los costos de los productos BanBif, disponible en nuestro tarifario, plataformas de atenci&oacute; n y p&aacute; gina web: www.Banbif.com.pe en el link(Tarifario General). </span></p></td>";
+            strHTML += "<td width='600' align='justify'><p style='text-align: justify; margin-top: 10px; margin-bottom: 10px; margin-left: 10px;'><span style='color: #6e6e6e;font-size: 11px;text-align: justify;font-family: arial;display:block;'>En caso de consultas, reclamos y/o siniestros llamar a la Central de Atenci&oacute; n al Cliente de Chubb Per&uacute; al 417-5000(Lima), escribe a atencion.seguros @ chubb.com , ingresa a la p&aacute; gina web www.chubb.com.pe y/o visita la oficina ubicada en Calle Amador Merino Reyna N&deg; 267 Oficina 402, San Isidro. Aplican exclusiones detalladas en la p&oacute; liza.El plazo para la atenci&oacute; n de consultas y/o reclamos es de 30 d&iacute;as contando desde la presentaci&oacute; n del reclamo y/o consulta, sin que ello implique caducidad de su derecho. Para mayor informaci&oacute; n puedes ingresar a la p&aacute; gina web www.BaniBf.com.pe y/o www.Chubb.com / pe.Este seguro ofrecido por CHUBB PERU S.A.puede ser adquirido en las oficinas de BanBif. BanBif no se responsabiliza legalmente por la disponibilidad, idoneidad, calidad, condiciones, entrega, exclusiones, daño o perjuicio respecto a los seguros ofrecidos por CHUBB.La presente informaci&oacute; n es parcial y no constituye las condiciones de la P&oacute; liza, prevaleciendo los t&eacute; rminos del contrato suscrito ante CHUBB y el adquirente del seguro.BanBif interviene en calidad de comercializador del Seguro de Sepelio de CHUBB, conforme al Reglamento de Comercializaci&oacute; n de Productos de Seguros Res. SBS N&deg; 1121-2017, Ley Complementaria a la Ley de Protecci&oacute; n al Consumidor en Materia de Servicios Financieros Ley N&deg; 28587 y sus normas modificatorias, as&iacute; como el Reglamento de Gesti&oacute; n de Conducta de Mercado aprobado por Res. SBS N&deg; 3274-2017 y sus modificatorias.Informaci&oacute; n sobre los costos de los productos BanBif, disponible en nuestro tarifario, plataformas de atenci&oacute; n y p&aacute; gina web: www.Banbif.com.pe en el link(Tarifario General). </span></p></td>";
  
-            strHTML += "     </tr>";
+            strHTML += "</tr>";
 
             strHTML += "</table></td>";
 
@@ -738,7 +780,7 @@ namespace BanBif.Seguros.Sepelio.BL
 
             strHTML += "<td width='600'><p style='margin: 10px 0px 10px 0px; border-top: 2px  solid #000000; line-height: 0px;'>&nbsp;</p></td>";
  
-                 strHTML += "</tr>";
+            strHTML += "</tr>";
 
             strHTML += "</table></td>";
 
@@ -832,22 +874,15 @@ namespace BanBif.Seguros.Sepelio.BL
                     strHTML += "<td height='20' style=''>&nbsp;</td>";
 
 
-                  strHTML += "</tr>";
+            strHTML += "</tr>";
+            strHTML += "</tbody>";
+            strHTML += "</table></td>";
+            strHTML += "</tr>";
+            strHTML += "</table>";
+            strHTML += "</div>";
+            strHTML += "</body>";
+            strHTML += "</html>";
 
-
-                strHTML += "</tbody>";
-
-
-              strHTML += "</table></td>";
-
-
-          strHTML += "</tr>";
-
-
-        strHTML += "</table>";
-      strHTML += "</div>";
-      strHTML += "</body>";
-      strHTML += "</html>";
             return strHTML;
         }
 

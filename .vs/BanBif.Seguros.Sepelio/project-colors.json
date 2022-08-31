@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0a2827a2-5d14-480f-81e8-41e92084198e": {
+      "ProjectGuid": "0a2827a2-5d14-480f-81e8-41e92084198e",
+      "DisplayName": "BanBif.Seguros.Sepelio.BL",
+      "ColorIndex": 0
+    },
+    "432ffc99-d7b7-45fa-8d98-d1d95594c2bf": {
+      "ProjectGuid": "432ffc99-d7b7-45fa-8d98-d1d95594c2bf",
+      "DisplayName": "BanBif.Seguros.Sepelio.BE",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

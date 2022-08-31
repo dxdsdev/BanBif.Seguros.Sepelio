@@ -40,3 +40,17 @@ C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.
 C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.csproj.CopyComplete
 C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.dll
 C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\BanBif.Seguros.Sepelio.DA.dll.config
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\BanBif.Seguros.Sepelio.DA.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\BanBif.Seguros.Sepelio.DA.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\BanBif.Seguros.Sepelio.BE.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\EntityFramework.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\BanBif.Seguros.Sepelio.BE.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\EntityFramework.xml
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.csproj.AssemblyReference.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.csproj.CoreCompileInputs.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.csproj.CopyComplete
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\BanBif.Seguros.Sepelio\BanBif.Seguros.Sepelio.DA\obj\Debug\BanBif.Seguros.Sepelio.DA.pdb
